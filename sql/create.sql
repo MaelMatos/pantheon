@@ -6,9 +6,16 @@ create table usuarios(
     PRIMARY KEY(id_usuario)
 );
 
+CREATE TABLE paginas(
+    id_pagina INT NOT null AUTO_INCREMENT,
+    nome VARCHAR(255),
+    PRIMARY KEY (id_pagina)
+);
 CREATE table acesso(
     id_acesso INT NOT null AUTO_INCREMENT,
     id_pagina INT,
     id_usuario INT,
     PRIMARY KEY(id_acesso)
-)
+    FOREIGN KEY (id_pagina) REFERENCES Persons(PersonID)
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+);
