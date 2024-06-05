@@ -1,0 +1,20 @@
+<?php
+//conexão do banco
+
+$host = "localhost:3306";
+$database_name = "pizzaria";
+$userr = "root";
+$password = "";
+
+try{
+$con = new PDO("mysql:host=$host;dbname=$database_name","$userr","$password");
+$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo '<script>console.log("conexão bem sucedida");</script>';
+} catch(PDOException $con_error) {
+    echo '<script>console.log("conexão falhou: ' . $con_error->getMessage() . '");</script>';
+}
+
+
+
+
+?>
