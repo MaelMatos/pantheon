@@ -5,3 +5,10 @@ create table usuarios(
     senha VARCHAR(255),
     PRIMARY KEY(id_usuario)
 );
+
+CREATE table acesso(
+    id_acesso INT NOT null AUTO_INCREMENT,
+    id_pagina INT,
+    id_usuario INT,
+    PRIMARY KEY(id_acesso)
+)
