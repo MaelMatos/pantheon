@@ -2,7 +2,7 @@
 //conexão do banco
 
 $host = "localhost:3306";
-$database_name = "pizzaria";
+$database_name = "pantheon";
 $userr = "root";
 $password = "";
 

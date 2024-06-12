@@ -1,5 +1,5 @@
 <?php
-$debug = false;
+$debug = true;
 /* conexão com banco de dados */
 
 require "conect.php";
@@ -20,7 +20,10 @@ $a = get_defined_vars();
 print_r($a);
 
 }
-
+// pegar numeros de ususarios registrados
+$user_n = $con->query("SELECT COUNT(nome) as user_n FROM usuarios;");
+$user_n = $user_n->fetch(PDO::FETCH_ASSOC);
+$_SESSION['user_n'] = $user_n
 
 /* if($_SESSION['acess_lvl'] != 1 || 2 || 0){
     header('location:index.php');
