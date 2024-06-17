@@ -11,7 +11,7 @@ function D(int $n,int $l){
     }
     return $dr;
 }
-function D+(int $n,int $l){
+function Dvantagem(int $n,int $l){
     $d=0;
     $dr=0;
     echo "<script>console.log('rolando os dados de ".$l."lados...')</script>";
@@ -25,7 +25,7 @@ function D+(int $n,int $l){
     echo "<script>console.log('".$d."')</script>";
     return $dr;
 }
-function D-(int $n,int $l){
+function Ddesvantagem(int $n,int $l){
     $d=0;
     $dr=0;
     echo "<script>console.log('rolando os dados de ".$l."lados...')</script>";
@@ -39,7 +39,7 @@ function D-(int $n,int $l){
     echo "<script>console.log('".$d."')</script>";
     return $dr;
 }
-function D++(int $n,int $l){
+function Dcrit(int $n,int $l){
     $d=0;
     $dr=0;
     while($n>0){
