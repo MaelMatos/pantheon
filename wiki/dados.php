@@ -9,7 +9,8 @@ function D(int $n,int $l){
         $n = $n-1;
         $dr = $dr+$d;
     }
-    return $dr;}
+    return $dr;
+}
 function D+(int $n,int $l){
     $d=0;
     $dr=0;
