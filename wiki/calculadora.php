@@ -9,10 +9,15 @@ include "../sessao.php";
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="get">
+    <form action="calculadora2.php" method="get">
         <input type="number" name="ra" placeholder="resistencia/poder antiga" value="0">
-        <input type="number" name="rn" placeholder="resistencia/poder nova">
-        <input type="number" name="rn" placeholder="modificador por ponto" value="0">
+        <input type="number" name="rn" placeholder="resistencia/poder nova" value="0">
+        <input type="number" name="va" placeholder="vida/energia maxima atual" value="0">
+        <input type="number" name="m" placeholder="modificador por ponto" value="0">
+        <label>dado de vida:</label><select name="nl" id="">
+            <option value="20">D20</option>
+            <option value="6">D6</option>
+        </select>
         <input type="submit" value="calcular">
     </form>
 </body>

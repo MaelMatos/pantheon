@@ -3,7 +3,7 @@ function D(int $n,int $l){
     $d=0;
     $dr=0;
     while($n>0){
-        echo "<script>console.log('rolando os dados de ".$l."lados(".$n.")...')</script>";
+        echo "<script>console.log('rolando os dados de ".$l." lados(".$n.")...')</script>";
         $d=random_int(1,$l);
         echo "<script>console.log('".$d."')</script>";
         $n = $n-1;
@@ -14,7 +14,7 @@ function D(int $n,int $l){
 function Dvantagem(int $n,int $l){
     $d=0;
     $dr=0;
-    echo "<script>console.log('rolando os dados de ".$l."lados...')</script>";
+    echo "<script>console.log('rolando os dados de ".$l." lados...')</script>";
     while($n>0){
         $d=random_int(1,$l);
         if($dr<$d){
@@ -28,7 +28,7 @@ function Dvantagem(int $n,int $l){
 function Ddesvantagem(int $n,int $l){
     $d=0;
     $dr=0;
-    echo "<script>console.log('rolando os dados de ".$l."lados...')</script>";
+    echo "<script>console.log('rolando os dados de ".$l." lados...')</script>";
     while($n>0){
         $d=random_int(1,$l);
         if($dr>$d){
@@ -43,7 +43,7 @@ function Dcrit(int $n,int $l){
     $d=0;
     $dr=0;
     while($n>0){
-        echo "<script>console.log('rolando os dados de ".$l."lados(".$n.")...')</script>";
+        echo "<script>console.log('rolando os dados de ".$l." lados(".$n.")...')</script>";
         $d=random_int(1,$l);
         echo "<script>console.log('".$d."')</script>";
         if($d==1){
