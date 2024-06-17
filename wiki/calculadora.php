@@ -10,8 +10,9 @@ include "../sessao.php";
 </head>
 <body>
     <form action="" method="get">
-        <input type="number" name="ra" placeholder="resistencia antiga">
-        <input type="number" name="" placeholder="resistencia nova">
+        <input type="number" name="ra" placeholder="resistencia/poder antiga" value="0">
+        <input type="number" name="rn" placeholder="resistencia/poder nova">
+        <input type="number" name="rn" placeholder="modificador por ponto" value="0">
         <input type="submit" value="calcular">
     </form>
 </body>
