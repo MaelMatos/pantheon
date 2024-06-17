@@ -1,5 +1,5 @@
 <?php
-$debug = true;
+$debug = false;
 /* conexão com banco de dados */
 
 require "conect.php";

@@ -1,0 +1,17 @@
+<?php
+require "head.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="display: inline">
+<form action="session_destroy.php" method="get"> <input type="hidden" name="n" value="true"><input type="submit" value="sair" style="border:red,solid"></form>
+</div>
+    
+</body>
+</html>
