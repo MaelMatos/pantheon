@@ -10,7 +10,9 @@ require "head.php";
 </head>
 <body>
 <div style="display: inline">
-<form action="session_destroy.php" method="get"> <input type="hidden" name="n" value="true"><input type="submit" value="sair" style="border:red,solid"></form>
+
+<form action="session_destroy.php" method="get"> <input type="hidden" name="n" value="true"><input type="submit" value="sair" class="btn btn-danger"></form>
+
 </div>
     
 </body>
