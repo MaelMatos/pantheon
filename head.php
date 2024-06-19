@@ -1,5 +1,6 @@
 <?php
 $debug = false;
+$local
 /* conexão com banco de dados */
 
 require "conect.php";

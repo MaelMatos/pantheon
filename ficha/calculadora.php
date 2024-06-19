@@ -33,7 +33,7 @@ include "../cabecalho.php";
              <option value="10">D10</option>
              <option value="6">D6</option>
             </select>
-         <input class="btn btn-outline-secondary" type="subimit" value="calcular">
+         <input class="btn btn-outline-secondary" type="submit" value="calcular">
         </div>
         </div>
     </form>

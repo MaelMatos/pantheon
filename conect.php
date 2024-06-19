@@ -1,10 +1,18 @@
 <?php
 //conexão do banco
-
-$host = "localhost:3306";
-$database_name = "pantheon";
-$userr = "root";
-$password = "";
+if($local){
+    $host = "localhost:3306";
+    $database_name = "pantheon";
+    $userr = "root";
+    $password = "";
+}
+else{
+    
+    $host = "localhost:3306";
+    $database_name = "pantheon";
+    $userr = "root";
+    $password = "";
+}
 
 try{
 $con = new PDO("mysql:host=$host;dbname=$database_name","$userr","$password");
