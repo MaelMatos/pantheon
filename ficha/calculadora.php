@@ -28,7 +28,7 @@ include "../cabecalho.php";
          <label for="floatingInput">modificador por ponto</label>
          </div>
          <span class="input-group-text " id="basic-addon1">dado de vida:</span>
-         <select class="custom-select" id="inputGroupSelect04">
+         <select class="custom-select" id="inputGroupSelect04" name="nl">
              <option value="20">D20</option>
              <option value="10">D10</option>
              <option value="6">D6</option>
