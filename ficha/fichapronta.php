@@ -77,11 +77,17 @@ require "../head.php";
 <div style="display:flex;width:100%;">
     <div style="width:50%;">
     <h2>inventario</h2>
-    
+
     </div>
 
     <div style="width:50%;">
     <h2>técnicas</h2>
+    <?php
+    foreach($tecnicas as $tecnica){
+        $tecnica = $con->query("select * where id_tecnica='$tecnica' from tecnicas")->fetch(PDO::FETCH_ASSOC);
+        echo $tecnica['nome'];
+    }
+    ?>
     </div>
 </div>
 
