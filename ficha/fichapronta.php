@@ -83,7 +83,7 @@ require "../head.php";
     <div style="width:50%;">
     <h2>técnicas</h2>
     <?php
-    foreach($tecnicas as $tecnica){
+    foreach($tecnicas as $tecnica){//para cada valor($tecnica) dentro do array($tecnicas)
         $tecnica = $con->query("select * where id_tecnica='$tecnica' from tecnicas")->fetch(PDO::FETCH_ASSOC);
         echo $tecnica['nome'];
     }
