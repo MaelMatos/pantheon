@@ -5,13 +5,11 @@ if($local){
     $database_name = "pantheon";
     $userr = "root";
     $password = "";
-}
-else{
-    
+} else{
     $host = "sql204.infinityfree.com:3306";
     $database_name = "if0_36745921_pantheon";
-    $userr = "root";
-    $password = "";
+    $userr = "if0_36745921";
+    $password = "w3OiSfo4i9Mx7";
 }
 
 try{
