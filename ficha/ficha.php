@@ -8,5 +8,3 @@ if (!isset($dados)){
     include "fichanova.php";
 }
 ?>
-    
-
