@@ -2,7 +2,9 @@
 require "../head.php";
 ?>
 
-
+<style>
+    h2{text-align:center}
+</style>
 <form action="atualizaficha.php" method="post">
 <!-- informações adicionais -->
     <div class="input-group">
@@ -71,13 +73,15 @@ require "../head.php";
             </div>
             <label for="floatingInput">Vida</label>
         </div>
+</div>
+<div style="display:flex;width:100%;">
+    <div style="width:50%;">
+    <h2>inventario</h2>
+    
     </div>
-<div>
-    <div>
 
-    </div>
-    <div>
-        
+    <div style="width:50%;">
+    <h2>técnicas</h2>
     </div>
 </div>
 
