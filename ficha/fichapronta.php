@@ -56,14 +56,34 @@ require "../head.php";
             <label for="floatingInput">Classe de Armadura</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['OM'];?>" name="OM">
-            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['OMMAX'];?>" name="OMMAX">
+            <div class="form-control" id="floatingInput">
+                <input type="number" value="<?php echo $dados['OM'];?>" name="OM">
+                /
+                <input type="number" value="<?php echo $dados['OMMAX'];?>" name="OMMAX">
+            </div>
             <label for="floatingInput">Omnergia</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['HP'];?>" name="HP">
-            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['HPMAX'];?>" name="HPMAX">
+            <div class="form-control" id="floatingInput">
+                <input type="number" value="<?php echo $dados['HP'];?>" name="HP">
+                /
+                <input type="number" value="<?php echo $dados['HPMAX'];?>" name="OMMAX">
+            </div>
             <label for="floatingInput">Vida</label>
         </div>
     </div>
+<div>
+    <div>
+
+    </div>
+    <div>
+        
+    </div>
+</div>
+
+
+
+
+
+    <textarea name="info"><?php echo $dados['info'];?></textarea>
 </form>
