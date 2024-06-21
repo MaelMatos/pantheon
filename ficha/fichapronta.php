@@ -51,6 +51,17 @@ require "../head.php";
             <label for="floatingInput">poder</label>
         </div>
     </div>
+    <!-- atributos 3 -->
+<div class="input-group">
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['CO'];?>" name="CO">
+            <label for="floatingInput">Caminho Omnergico</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['CF'];?>" name="CF">
+            <label for="floatingInput">Caminho Fisico</label>
+        </div>
+    </div>
     <!-- atributos secundarios -->
 <div class="input-group">
         <div class="form-floating mb-3">
@@ -86,10 +97,13 @@ require "../head.php";
         <?php
         foreach($tecnicas as $tecnica){//para cada valor($tecnica) dentro do array($tecnicas)
             $tecnica = $con->query("select * where id_tecnica='$tecnica' from tecnicas")->fetch(PDO::FETCH_ASSOC);
-            echo ""$tecnica['nome'];
+            echo "<a href='".$tecnica['link']."'><ul>".$tecnica['nome']"</ul></a>";
         }
         ?>
         </ul>
+        <label>adicionar técnica:</label><select name="novatecnica">
+            
+        </select>
     </div>
 </div>
 
