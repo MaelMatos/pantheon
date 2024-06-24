@@ -97,7 +97,7 @@ require "../head.php";
         <?php
         foreach($tecnicas as $tecnica){//para cada valor($tecnica) dentro do array($tecnicas)
             $tecnica = $con->query("select * where id_tecnica='$tecnica' from tecnicas")->fetch(PDO::FETCH_ASSOC);
-            echo "<a href='".$tecnica['link']."'><ul>".$tecnica['nome']"</ul></a>";
+            echo "<a href='".$tecnica['link']."'><ul>".$tecnica['nome']."</ul></a>";
         }
         ?>
         </ul>
