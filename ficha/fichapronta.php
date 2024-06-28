@@ -101,7 +101,7 @@ require "../head.php";
         }
         ?>
         </ul>
-        <label>adicionar técnica:</label><select name="novatecnica">
+        <label>adicionar técnica:</label><select name="novatecnica" width="50%">
             
         </select>
     </div>
