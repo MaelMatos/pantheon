@@ -5,7 +5,7 @@ require "../head.php";
 <style>
     h2{text-align:center}
 </style>
-<form action="atualizaficha.php" method="post">
+<form action="salvaficha.php" method="post">
 <!-- informações adicionais -->
     <div class="input-group">
     <div class="form-floating mb-3">
@@ -106,10 +106,11 @@ require "../head.php";
         </select>
     </div>
 </div>
+<textarea name="info"><?php echo $dados['info'];?></textarea>
+<input type="hidden" name="id_ficha" value="id_ficha">
+<input type="submit" value="salvar">
 
 
 
 
-
-    <textarea name="info"><?php echo $dados['info'];?></textarea>
 </form>

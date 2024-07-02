@@ -1,14 +1,14 @@
 CREATE DATABASE pantheon;
 use pantheon;
 create table usuarios(
-    id_usuario INT NOT null AUTO_INCREMENT,
+    id_usuario INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),
     senha VARCHAR(255),
     tipo TEXT,
     PRIMARY KEY(id_usuario)
 );
 CREATE Table fichas(
-    id_ficha INT,
+    id_ficha INT NOT NULL,
     nome VARCHAR(255),
     mestre VARCHAR(255),
     campanha VARCHAR(255),
