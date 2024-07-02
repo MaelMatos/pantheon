@@ -5,15 +5,34 @@ create table usuarios(
     nome VARCHAR(255),
     senha VARCHAR(255),
     tipo TEXT,
-    id_mestre INT,
     PRIMARY KEY(id_usuario)
 );
-
-CREATE TABLE paginas(
-    id_pagina INT NOT null AUTO_INCREMENT,
+CREATE Table fichas(
+    id_ficha INT,
     nome VARCHAR(255),
-    PRIMARY KEY (id_pagina)
+    mestre VARCHAR(255),
+    campanha VARCHAR(255),
+    ´FOR´ BIGINT,
+    RES BIGINT,
+    AG BIGINT,
+    HAB BIGINT,
+    ´INT´ BIGINT,
+    PD BIGINT,
+    CO BIGINT,
+    CF BIGINT,
+    OM BIGINT,
+    OMMAX BIGINT,
+    HP BIGINT,
+    HPMAX BIGINT,
+    PRIMARY KEY(id_ficha)
 );
+CREATE Table ficha-tecnica(
+    id_usuario-ficha INT NOT NULL,
+    id_ficha INT,
+    id_usuario INT,
+    PRIMARY KEY(id_usuario-ficha)
+);
+
 CREATE table acesso(
     id_acesso INT NOT null AUTO_INCREMENT,
     id_pagina INT,
