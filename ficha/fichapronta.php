@@ -101,9 +101,9 @@ require "../head.php";
         }
         ?>
         </ul>
-        <label>adicionar técnica:</label><select name="novatecnica" width="50%">
-            
-        </select>
+<?php
+include "add_tecnica.php";
+?>
     </div>
 </div>
 <textarea name="info"><?php echo $dados['info'];?></textarea>
