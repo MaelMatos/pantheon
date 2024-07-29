@@ -26,6 +26,23 @@ CREATE Table fichas(
     HPMAX BIGINT,
     PRIMARY KEY(id_ficha)
 );
+
+CREATE TABLE tecnica(
+    id_tecnica INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255),
+    tipo VARCHAR(255),
+    elemento VARCHAR(255),
+    ranking VARCHAR(255),
+    classificacao VARCHAR(255),
+    caminho VARCHAR(255),
+    url VARCHAR(255),
+    custo VARCHAR(255),
+    dano INT,
+    dado-dano VARCHAR(255),
+    dado-acerto VARCHAR(255),
+    PRIMARY KEY(id_tecnica)
+);
+
 CREATE Table ficha-tecnica(
     id_usuario-ficha INT NOT NULL,
     id_ficha INT,
