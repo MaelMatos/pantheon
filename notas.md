@@ -1,2 +1,2 @@
-- quando criar cadastro de usuario,verificar se o nome já está sendo ultilizadp
+- quando criar cadastro de usuario,verificar se o nome já está sendo ultilizado
  - isso será ultilizado no cadastro de mestre
