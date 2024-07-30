@@ -27,7 +27,7 @@ CREATE Table fichas(
     PRIMARY KEY(id_ficha)
 );
 
-CREATE TABLE tecnica(
+CREATE TABLE tecnicas(
     id_tecnica INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),
     tipo VARCHAR(255),
@@ -42,7 +42,7 @@ CREATE TABLE tecnica(
     dado-acerto VARCHAR(255),
     PRIMARY KEY(id_tecnica)
 );
-CREATE TABLE item(
+CREATE TABLE itens(
     id_item INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),
     tipo VARCHAR(255),

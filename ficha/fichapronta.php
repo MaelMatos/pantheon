@@ -88,7 +88,14 @@ require "../head.php";
 <div style="display:flex;width:100%;">
     <div style="width:50%;">
     <h2>inventario</h2>
-
+    <ul>
+        <?php
+        foreach($itens as $item){//para cada valor($item) dentro do array($itens)
+            $item = $con->query("select * where id_item='$item' from itens")->fetch(PDO::FETCH_ASSOC);
+            echo "<a href='".$item['link']."'><ul>".$item['nome']."</ul></a>";
+        }
+        ?>
+        </ul>
     </div>
 
     <div style="width:50%;">
@@ -105,10 +112,14 @@ require "../head.php";
 include "add_tecnica.php";
 ?>
     </div>
+
 </div>
 <textarea name="info"><?php echo $dados['info'];?></textarea>
-<input type="hidden" name="id_ficha" value="id_ficha">
-<input type="submit" value="salvar">
+<input type="hidden" name="id_ficha" value="<?php echo $id_ficha;?>">
+<div style="text-align: center;}">
+
+    <input type="submit" value="salvar">
+</div>
 
 
 
