@@ -2,7 +2,7 @@
 $user = $_POST['user'];
 $pw = $_POST['pw'];
 require "head.php";
-
+if($_POST['bt']){
 //coletar usuario e senha do formulario (index.php)
 
 //encriptar senha
@@ -34,5 +34,8 @@ if($epw = $rpw){
 else if(!$debug){
     header('location:erro_login.html');
 }
-
+}
+else{
+    require "criar_conta.php";
+}
 ?>

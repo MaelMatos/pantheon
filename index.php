@@ -22,16 +22,20 @@ if(isset($_SESSION['nome'])){
 </style>
 </head>
 <body class="cor">
-<form action="login.php" method="post" class="centered">
-  <div class="form-group">
-    <label for="formGroupExampleInput">Usuario</label>
-    <input type="text" class="form-control margem" id="formGroupExampleInput" name="user" autocomplete=off>
+  <div class="centered">
+
+    <form action="login.php" method="post">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Usuario</label>
+        <input type="text" class="form-control margem" id="formGroupExampleInput" name="user" autocomplete=off>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Senha</label>
+        <input type="password" class="form-control margem" id="formGroupExampleInput2" name="pw">
+        <button type="submit" name="bt" value="true">entrar</button>
+        <button type="submit" name="bt" value="false">criar conta</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Senha</label>
-    <input type="password" class="form-control margem" id="formGroupExampleInput2" name="pw">
-    <input type="submit" value="entrar">
-</div>
-</form>
 </body>
 </html>
