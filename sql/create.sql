@@ -58,11 +58,23 @@ CREATE TABLE itens(
     PRIMARY KEY(id_item)
 );
 
-CREATE Table ficha_tecnica(
+CREATE Table ficha_usuario(
     id_usuario_ficha INT NOT NULL,
     id_ficha INT,
     id_usuario INT,
     PRIMARY KEY(id_usuario_ficha)
+);
+CREATE Table ficha_tecnica(
+    id_ficha_tecnica INT NOT NULL,
+    id_ficha INT,
+    id_tecnica INT,
+    PRIMARY KEY(id_ficha_tecnica)
+);
+CREATE Table ficha_item(
+    id_ficha_tecnica INT NOT NULL,
+    id_ficha INT,
+    id_item INT,
+    PRIMARY KEY(id_ficha_item)
 );
 
 /* CREATE table acesso(
