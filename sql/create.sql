@@ -38,8 +38,8 @@ CREATE TABLE tecnicas(
     url VARCHAR(255),
     custo VARCHAR(255),
     dano INT,
-    dado-dano VARCHAR(255),
-    dado-acerto VARCHAR(255),
+    dado_dano VARCHAR(255),
+    dado_acerto VARCHAR(255),
     PRIMARY KEY(id_tecnica)
 );
 CREATE TABLE itens(
@@ -53,8 +53,8 @@ CREATE TABLE itens(
     url VARCHAR(255),
     custo VARCHAR(255),
     dano INT,
-    dado-dano VARCHAR(255),
-    dado-acerto VARCHAR(255),
+    dado_dano VARCHAR(255),
+    dado_acerto VARCHAR(255),
     PRIMARY KEY(id_item)
 );
 
