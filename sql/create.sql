@@ -71,7 +71,7 @@ CREATE Table ficha_tecnica(
     PRIMARY KEY(id_ficha_tecnica)
 );
 CREATE Table ficha_item(
-    id_ficha_tecnica INT NOT NULL,
+    id_ficha_item INT NOT NULL,
     id_ficha INT,
     id_item INT,
     PRIMARY KEY(id_ficha_item)
