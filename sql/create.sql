@@ -58,18 +58,18 @@ CREATE TABLE itens(
     PRIMARY KEY(id_item)
 );
 
-CREATE Table ficha-tecnica(
-    id_usuario-ficha INT NOT NULL,
+CREATE Table ficha_tecnica(
+    id_usuario_ficha INT NOT NULL,
     id_ficha INT,
     id_usuario INT,
-    PRIMARY KEY(id_usuario-ficha)
+    PRIMARY KEY(id_usuario_ficha)
 );
 
-CREATE table acesso(
+/* CREATE table acesso(
     id_acesso INT NOT null AUTO_INCREMENT,
     id_pagina INT,
     id_usuario INT,
     PRIMARY KEY(id_acesso),
     FOREIGN KEY (id_pagina) REFERENCES paginas(id_pagina),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
-);
+); */
