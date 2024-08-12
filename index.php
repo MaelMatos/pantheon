@@ -33,7 +33,7 @@ if(isset($_SESSION['nome'])){
         <label for="formGroupExampleInput2">Senha</label>
         <input type="password" class="form-control margem" id="formGroupExampleInput2" name="pw">
         <input type="submit" value="entrar">  
-        <button><a href="cria_conta.php">criar conta</button>
+        <button><a href="criar_conta.php">criar conta</a></button>
       </div>
     </form>
   </div>
