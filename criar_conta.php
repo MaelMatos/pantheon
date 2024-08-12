@@ -1,4 +1,7 @@
-<form method="post" action="criar_conta2.php">
+<?php
+require "head.php";
+?>
+<form method="post" action="criar_conta2.php" class="">
 <label>qual o tipo de conta será criada?</label>
 <div class="form-check">
       <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" value="mestre">
@@ -12,7 +15,9 @@
         jogador
       </label>
     </div>
-<input type="text" name="user" placeholeder="nome de usuario">
-<input type="text" name="pw" placeholeder="nome de usuario">
+    <div class="input-gruop">
+        <input type="text" name="user" class="form-control"placeholeder="nome de usuario">
+        <input type="text" name="pw" class="form-control" placeholeder="nome de usuario">
+    </div>
 <input type="submit" value="continuar">
 </form>

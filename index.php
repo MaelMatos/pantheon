@@ -16,9 +16,7 @@ if(isset($_SESSION['nome'])){
 <style>
     .margem{margin-bottom:15px;}
     .cor{background-color:#F1F0E8}
-    .centered {position: fixed; top: 50%; left: 50%;
-          /* bring your own prefixes */
-           transform: translate(-50%, -50%); text-align: center;}
+
 </style>
 </head>
 <body class="cor">
