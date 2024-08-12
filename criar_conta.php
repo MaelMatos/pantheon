@@ -1,7 +1,7 @@
 <?php
 require "head.php";
 ?>
-<form method="post" action="criar_conta2.php" class="">
+<form method="post" action="criar_conta2.php" class="centered">
 <label>qual o tipo de conta será criada?</label>
 <div class="form-check">
       <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" value="mestre">
@@ -16,6 +16,7 @@ require "head.php";
       </label>
     </div>
     <div class="input-gruop">
+        
         <input type="text" name="user" class="form-control"placeholeder="nome de usuario">
         <input type="text" name="pw" class="form-control" placeholeder="nome de usuario">
     </div>
