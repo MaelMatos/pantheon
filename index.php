@@ -15,8 +15,6 @@ if(isset($_SESSION['nome'])){
 <!--     <link rel="stylesheet" href="form.css"> -->
 <style>
     .margem{margin-bottom:15px;}
-    .cor{background-color:#F1F0E8}
-
 </style>
 </head>
 <body class="cor">
