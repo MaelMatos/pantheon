@@ -16,9 +16,14 @@ require "head.php";
       </label>
     </div>
     <div class="input-gruop">
-        
-        <input type="text" name="user" class="form-control"placeholeder="nome de usuario">
-        <input type="text" name="pw" class="form-control" placeholeder="nome de usuario">
+        <div class="form-floating">
+        <input type="text" class="form-control" id="floatingPassword" placeholder="usuario" name="user">
+        <label for="floatingPassword">usuario</label>
+        </div>
+        <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="senha" name="pw">
+        <label for="floatingPassword">senha</label>
+        </div>
     </div>
-<input type="submit" value="continuar">
+<input type="submit" value="continuar" class="btn btn-outline-secondary">
 </form>
