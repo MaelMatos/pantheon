@@ -32,8 +32,8 @@ if(isset($_SESSION['nome'])){
       <div class="form-group">
         <label for="formGroupExampleInput2">Senha</label>
         <input type="password" class="form-control margem" id="formGroupExampleInput2" name="pw">
-        <button type="submit" name="bt" value="true">entrar</button>
-        <button type="submit" name="bt" value="false">criar conta</button>
+        <input type="submit" value="entrar">  
+        <button><a href="cria_conta.php">criar conta</button>
       </div>
     </form>
   </div>
