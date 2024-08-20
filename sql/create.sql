@@ -12,11 +12,11 @@ CREATE Table fichas(
     nome VARCHAR(255),
     mestre VARCHAR(255),
     campanha VARCHAR(255),
-    ´FOR´ BIGINT,
+    "FOR" BIGINT,
     RES BIGINT,
     AG BIGINT,
     HAB BIGINT,
-    ´INT´ BIGINT,
+    "INT" BIGINT,
     PD BIGINT,
     CO BIGINT,
     CF BIGINT,
@@ -25,7 +25,7 @@ CREATE Table fichas(
     HP BIGINT,
     HPMAX BIGINT,
     PRIMARY KEY(id_ficha)
-);
+); /* erro */
 
 CREATE TABLE tecnicas(
     id_tecnica INT NOT NULL AUTO_INCREMENT,
