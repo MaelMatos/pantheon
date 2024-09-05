@@ -1,8 +1,5 @@
 <?php
 require "head.php";
-if(isset($_SESSION['nome'])){
-  'location:wiki/home.php';
-}
 ?>
 
 <!DOCTYPE html>
