@@ -3,3 +3,25 @@
      transform: translate(-50%, -50%); text-align: center;}
 .cor{background-color:#F1F0E8}
 .grp{text-align: center;}
+
+body{
+ background-color: burlywood;
+}
+
+
+h1{
+ color:#49382B;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+p{
+    color:#49382B;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+label{
+ color:#49382B;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
