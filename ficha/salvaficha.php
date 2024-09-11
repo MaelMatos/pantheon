@@ -20,7 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $HP = $_POST["HP"];
     $HPMAX = $_POST["HPMAX"];
     $info = $_POST["info"];
-    $id_ficha = $_POST["id_ficha"];
+    if(isset($_POST["id_ficha"])){
+        $id_ficha = $_POST["id_ficha"];
+    }
 
     // Valida os dados (adicione validações conforme necessário)
 
