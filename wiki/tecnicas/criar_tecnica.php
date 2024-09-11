@@ -113,10 +113,5 @@ require $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php";
 <option value="f-">F-</option>
 <option value="f--">F--</option>
 </select>
-
-<select name="rank" class="form-select" style="margin-bottom:5px;">
-    
-</select>
-
 <input type="submit" value="Salvar">
 </form>
