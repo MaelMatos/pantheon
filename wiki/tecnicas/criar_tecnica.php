@@ -31,7 +31,8 @@ require $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php";
     <option value="radiacao">Radiação</option>
     <option value="magnetismo">Magnetismo</option>
     <option value="luz" style="text-align:center">Luz</option>
-    <option value="divino" style="text-align:center">Escuridão</option>
+    <option value="escuridao" style="text-align:center">Escuridão</option>
+    <option value="divino" style="text-align:center">Divino</option>
 </select>
 
 
