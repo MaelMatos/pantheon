@@ -38,6 +38,8 @@ $_SESSION['user_n'] = $user_n
 <!-- ajax -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
 <!-- css -->
-<link href="pantheon.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo $_SERVER['DOCUMENT_ROOT']."/pantheon/pantheon.css";?>">
 
+
+<!-- $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php" -->
 

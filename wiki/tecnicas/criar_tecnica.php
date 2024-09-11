@@ -1,7 +1,10 @@
 <?php
-require $_SESSION['head'];
+require $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php";
 ?>
 <form action="salvar_tecnica.php" method="get" class="centered">
 <input type="text" name="nome">
-
+<select name="tipo">
+    <option value=""></option>
+</select>
+<input type="submit" value="">
 </form>
