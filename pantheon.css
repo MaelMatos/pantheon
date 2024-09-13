@@ -5,23 +5,24 @@
 .grp{text-align: center;}
 
 body{
- background-color: #d78888;
+ background-color: burlywood;
 }
 
 
 h1{
- color:#330345 ;
+ color:#8C2828 ;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 p{
-    color:#330345 ;
+    color:#8C2828 ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 label{
- color:#330345 ;
+ color:#8C2828 ;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
