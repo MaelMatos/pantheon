@@ -1,7 +1,12 @@
 <?php
 require "../head.php";
 ?>
-
+<script>
+    n = 1;
+function add_tecnica{
+    document.write('<?php  include add_tecnica.php; ?>')
+}
+</script>
 <style>
     h2{text-align:center}
 </style>
@@ -85,18 +90,6 @@ require "../head.php";
             <label for="floatingInput">Vida</label>
         </div>
 </div>
-<div style="display:flex;width:100%;">
-    <div style="width:50%;">
-    <h2>inventario</h2>
-
-    </div>
-
-    <div style="width:50%;">
-    <h2>técnicas</h2>
-<?php
-include "add_tecnica.php";
-?>
-    </div>
 
 </div>
 <textarea name="info"></textarea>

@@ -109,7 +109,7 @@ require "../head.php";
         ?>
         </ul>
 <?php
-include "add_tecnica.php";
+/* include "add_tecnica.php"; */
 ?>
     </div>
 

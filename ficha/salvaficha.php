@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $id_ficha = $_POST["id_ficha"];
     }
 
+
     // Valida os dados (adicione validações conforme necessário)
 
     // Prepara a consulta SQL para atualizar a ficha
@@ -109,7 +110,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Executa a consulta
     if ($stmt->execute()) {
         // A ficha foi criada com sucesso
-        echo "Nova ficha criada com sucesso!";
+        $id_ficha = $con->lastInsertId();
+        echo "<script src='sucessoficha.js'></script>";
+        
     } else {
         // Ocorreu um erro durante a criação
         echo "Erro ao criar a ficha.";
