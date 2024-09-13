@@ -1,4 +1,5 @@
 <?php
+require "/head.php";
      $i = 0;
      $id_tecnica = [];
      while (true){
