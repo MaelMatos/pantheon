@@ -63,7 +63,7 @@ require $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php";
 </select>
 
 <select name="rank" class="form-select" style="margin-bottom:5px;">
-<option selected>rank</option>
+<option selected>Rank</option>
 <optgroup></optgroup>
 <option value="ss++">SS++</option>
 <option value="ss+">SS+</option>
