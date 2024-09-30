@@ -3,7 +3,7 @@ include "head.php";
 
 // Obtém os dados do formulário
 $nome = $_POST['user'];
-$senha = $_POST['pw'];
+$senha = sha1($nome.$_POST['pw']);
 $tipo = $_POST['tipo'];
 
 // Prepara a query de inserção
