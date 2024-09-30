@@ -31,6 +31,10 @@ label{
     justify-content: space-between; /* Distribui elementos uniformemente */
     align-items: center; /* Alinha verticalmente ao centro */
     padding: 10px; /* Adiciona espaçamento */
+    background-color: lightgray;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
   }
   
   .head a {
