@@ -5,6 +5,7 @@ create table usuarios(
     nome VARCHAR(255),
     senha VARCHAR(255),
     tipo TEXT,
+    hora VARCHAR(20),
     PRIMARY KEY(id_usuario)
 );
 CREATE Table fichas(
