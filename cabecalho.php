@@ -10,9 +10,11 @@ require "head.php";
 </head>
 <body>
 <div class="head">
-<a href="home.php"><img src="logo.png" style="height:100px;widith:auto"></a>
-<form action="session_destroy.php" method="get"> <input type="hidden" name="n" value="true"><input type="submit" value="sair" class="btn btn-danger"></form>
-
+  <a href="home.php"><img src="logo.png" style="height:100px;width:auto" /></a>
+  <form action="session_destroy.php" method="get">
+    <input type="hidden" name="h" value="true">
+    <input type="submit" value="sair" class="btn btn-danger">
+  </form>
 </div>
     
 </body>

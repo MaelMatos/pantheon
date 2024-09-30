@@ -26,6 +26,13 @@ label{
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.head{
-    display: inline-block;
-}
+.head {
+    display: flex; /* Habilita flexbox */
+    justify-content: space-between; /* Distribui elementos uniformemente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 10px; /* Adiciona espaçamento */
+  }
+  
+  .head a {
+    margin-right: 20px; /* Adiciona espaçamento entre a logo e o botão */
+  }
