@@ -27,7 +27,7 @@ label{
 }
 
 .head {
-    display: flex; /* Habilita flexbox */
+    display: inline-flexbox; /* Habilita flexbox */
     justify-content: space-between; /* Distribui elementos uniformemente */
     align-items: center; /* Alinha verticalmente ao centro */
     padding: 10px; /* Adiciona espaçamento */
