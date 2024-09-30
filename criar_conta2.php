@@ -5,7 +5,7 @@ include "head.php";
 $nome = $_POST['user'];
 $senha = sha1($nome.$_POST['pw']);
 $tipo = $_POST['tipo'];
-$hora = date("D-m-y H:i:s");
+$hora = date("d-m-y H:i:s");
 
 // Prepara a query de inserção
 $sql = "INSERT INTO usuarios (nome, senha, tipo, hora) VALUES (:nome, :senha, :tipo, :hora)";
