@@ -8,13 +8,14 @@ $tipo = $_POST['tipo'];
 $hora = date("D-m-y H:i:s");
 
 // Prepara a query de inserção
-$sql = "INSERT INTO usuarios (nome, senha, tipo) VALUES (:nome, :senha, :tipo)";
+$sql = "INSERT INTO usuarios (nome, senha, tipo, hora) VALUES (:nome, :senha, :tipo, :hora)";
 $stmt = $con->prepare($sql);
 
 // Define os valores para os marcadores de posição
 $stmt->bindValue(':nome', $nome, PDO::PARAM_STR);
 $stmt->bindValue(':senha', $senha, PDO::PARAM_STR);
 $stmt->bindValue(':tipo', $tipo, PDO::PARAM_STR);
+$stmt->bindValue(':hora', $hora, PDO::PARAM_STR);
 
 // Executa a query
 $inserir = $stmt->execute();
