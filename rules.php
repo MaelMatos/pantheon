@@ -2,6 +2,7 @@
 $i=0;
 $permission = false;
 
+
 while($i<1024){
     if (!isset($_SESSION['id_user']) && $_SESSION['id_user'] == $rules[$i]) {
         $permission = true;
@@ -12,7 +13,7 @@ while($i<1024){
     }
 }
 if(!$permission){
-    'location:./index.php';
+    header('location:../index.php');
 }
 
 

@@ -1,14 +1,24 @@
 <?php
 $debug = false;
 $local = true;
-$root = /* $_SERVER["DOCUMENT_ROOT"]. */"../pantheon";
+$root = /* $_SERVER["DOCUMENT_ROOT"]. */"..";
 /* conexão com banco de dados */
+$escaped_url = htmlspecialchars( "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}", ENT_QUOTES, 'UTF-8' );
 
 require "conect.php";
 
 /* inciar sessão */
 
 require "sessao.php";
+
+if(!$debug){
+    if ("//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}" != $root."/index.php"){
+        if(!isset($_SESSION['nome'])){
+            header('location:../index.php');
+        }
+    }
+}
+
 
 if($debug){
     /* $info = var_dump();
