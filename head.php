@@ -1,6 +1,7 @@
 <?php
 $debug = false;
 $local = true;
+$root = /* $_SERVER["DOCUMENT_ROOT"]. */"../";
 /* conexão com banco de dados */
 
 require "conect.php";
