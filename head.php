@@ -1,7 +1,8 @@
 <?php
 $debug = false;
 $local = true;
-$root = __dir__;
+/* $root = __dir__; */
+$root = "../pantheon";
 /* conexão com banco de dados */
 
 require "conect.php";
