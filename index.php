@@ -1,4 +1,5 @@
 <?php
+$location = "";
 require "head.php";
 if(isset($_SESSION['nome'])){
   header('location:home.php');

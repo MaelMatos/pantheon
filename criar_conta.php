@@ -1,4 +1,5 @@
 <?php
+$location = "";
 require "head.php";
 ?>
 <body class="cor">

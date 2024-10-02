@@ -1,4 +1,5 @@
 <?php
+$location = "";
 include "head.php";
 
 // Obtém os dados do formulário
