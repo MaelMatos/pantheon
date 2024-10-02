@@ -11,13 +11,13 @@ require "conect.php";
 
 require "sessao.php";
 
-if(!$debug){
-    if ("//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}" != $root."/index.php"){
+/* if(!$debug){
+    if ("//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}" != $root."/pantheon/index.php"){
         if(!isset($_SESSION['nome'])){
-            header('location:../index.php');
+            header('location:../pantheon/index.php');
         }
     }
-}
+} */
 
 
 if($debug){
