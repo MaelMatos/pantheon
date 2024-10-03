@@ -2,7 +2,38 @@
 $debug = false;
 $local = true;
 /* $root = __dir__; */
-$root = "../pantheon";
+
+    // Iniciar a contagem
+    $contagem = 0;
+  
+    // Índice do caractere atual
+    $i = 0;
+    $string = $_SERVER['REQUEST_URI'];
+    $conjunto_caracteres = "pantheon";
+    $caractere_alvo = "/";
+    // Loop while
+    while ($i < strlen($string) - 1) {
+  
+      // Verificar se o caractere atual está no conjunto de caracteres
+      if (strpos($conjunto_caracteres, $string[$i]) !== false) {
+  
+        // Verificar se o próximo caractere é o caractere alvo
+        if ($string[$i + 1] === $caractere_alvo) {
+  
+          // Incrementar a contagem
+          $contagem++;
+        }
+      }
+  
+      // Avançar para o próximo caractere
+      $i++;
+    }
+$root = "";
+while($contagem>0){
+    $root = $root."../";
+    $contagem = $contagem-1;
+}
+$root = $root."pantheon";
 /* conexão com banco de dados */
 
 require "conect.php";
