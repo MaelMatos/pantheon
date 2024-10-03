@@ -1,5 +1,5 @@
 <?php
-require "../../cabecalho.php";
+require "../../head.php";
 ?>
 <form action="salvar_tecnica.php" method="get" class="centered">
 <div class="form-group" style="margin-bottom:5px;">
