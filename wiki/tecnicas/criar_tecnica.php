@@ -1,6 +1,17 @@
 <?php
 require "../../head.php";
 ?>
+<script>
+    function confirmar(){
+        let i = confirm("se voltar, todos os dados não salvos serão perdidos, deseja continuar?");
+        if(i){
+            window.history.back();
+        }
+    }
+</script>
+<button onclick="confirmar()" style="background-color:dark;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/U%2B2190.svg/25px-U%2B2190.svg.png"></button>
+
+
 <form action="salvar_tecnica.php" method="get" class="centered">
 <div class="form-group" style="margin-bottom:5px;">
         <input type="text" class="form-control margem" id="formGroupExampleInput" name="Nome" autocomplete=off placeholder="nome">
