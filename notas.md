@@ -3,3 +3,7 @@
 
 - forçar subimit com js
 - trocar action do form com js
+
+falta slava técnicas
+
+lista de fichas
