@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php";
+require "../../cabecalho.php";
 ?>
 <form action="salvar_tecnica.php" method="get" class="centered">
 <div class="form-group" style="margin-bottom:5px;">
