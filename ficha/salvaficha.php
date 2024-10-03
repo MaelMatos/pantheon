@@ -1,5 +1,6 @@
 <?php
 include "head.php";
+$last_edit = date("d-m-y H:i:s");
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                nome = :nome,
                mestre = :mestre,
                campanha = :campanha,
-               FOR = :FOR,
+               _FOR = :_FOR,
                RES = :RES,
                AG = :AG,
                HAB = :HAB,
-               INT = :INT,
+               _INT = :_INT,
                PD = :PD,
                CO = :CO,
                CF = :CF,
@@ -44,7 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                OMMAX = :OMMAX,
                HP = :HP,
                HPMAX = :HPMAX,
-               info = :info
+               info = :info,
+               LAST_EDIT = :LAST_EDIT
            WHERE id_ficha = :id_ficha";
 
     // Prepara a instrução preparada
@@ -67,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(":HP", $HP);
     $stmt->bindParam(":HPMAX", $HPMAX);
     $stmt->bindParam(":info", $info);
+    $stmt->bindParam(":LAST_EDIT", $last_edit);
     $stmt->bindParam(":id_ficha", $id_ficha);
 
     // Executa a consulta
@@ -83,8 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Valida os dados do formulário (se necessário)
 
     // Prepara a consulta SQL para inserir uma nova ficha
-    $sql = "INSERT INTO fichas (nome, mestre, campanha, FOR, RES, AG, HAB, INT, PD, CO, CF, OM, OMMAX, HP, HPMAX, info) 
-            VALUES (:nome, :mestre, :campanha, :FOR, :RES, :AG, :HAB, :INT, :PD, :CO, :CF, :OM, :OMMAX, :HP, :HPMAX, :info)";
+    $sql = "INSERT INTO fichas (nome, mestre, campanha, FOR, RES, AG, HAB, INT, PD, CO, CF, OM, OMMAX, HP, HPMAX, info, LAST_EDIT) 
+            VALUES (:nome, :mestre, :campanha, :FOR, :RES, :AG, :HAB, :INT, :PD, :CO, :CF, :OM, :OMMAX, :HP, :HPMAX, :info, :LAST_EDIT)";
 
     // Prepara a instrução preparada
     $stmt = $con->prepare($sql);
@@ -106,6 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(":HP", $HP);
     $stmt->bindParam(":HPMAX", $HPMAX);
     $stmt->bindParam(":info", $info);
+    $stmt->bindParam(":LAST_EDIT", $last_edit);
 
     // Executa a consulta
     if ($stmt->execute()) {
