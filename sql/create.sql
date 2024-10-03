@@ -25,8 +25,9 @@ CREATE Table fichas(
     OMMAX BIGINT,
     HP BIGINT,
     HPMAX BIGINT,
+    LAST_EDIT VARCHAR(20),
     PRIMARY KEY(id_ficha)
-); /* erro */
+); 
 
 CREATE TABLE tecnicas(
     id_tecnica INT NOT NULL AUTO_INCREMENT,
