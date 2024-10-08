@@ -22,8 +22,8 @@ foreach($fichas as $ficha){
       <td>@mdo</td>
     </tr>
   <?php
-  echo "<a href='"$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
-  
+  echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
+
   echo "</tr></a>";
 }
 ?>
