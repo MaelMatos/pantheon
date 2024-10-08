@@ -29,10 +29,11 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </tr>
     <?php
     foreach($fichas as $ficha){
-
       $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
       echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
-  
+      echo "<td>".$ficha['nome']."</td>";
+      echo "<td>".$ficha['campanha']."</td>";
+      echo "<td>".$ficha['LAST_EDIT']."</td>";
       echo "</tr></a>";
   }
   ?>
