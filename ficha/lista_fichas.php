@@ -4,8 +4,6 @@ $stmt = $con->prepare("SELECT id_ficha FROM ficha_usuario WHERE id_usuario = :id
 $stmt->bindParam(':id_user', $_SESSION['id_user']);
 $stmt->execute();
 $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach($fichas as $ficha){
-    $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +28,12 @@ foreach($fichas as $ficha){
         <td>@mdo</td>
       </tr>
     <?php
-    echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
+    foreach($fichas as $ficha){
+
+      $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
+      echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
   
-    echo "</tr></a>";
+      echo "</tr></a>";
   }
   ?>
     </tbody>
