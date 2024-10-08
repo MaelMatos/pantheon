@@ -42,6 +42,7 @@ label {
   color: #ffffff;
   text-decoration: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border:none
 }
 
 .head {
@@ -60,4 +61,10 @@ label {
 }
 .nav-item a:hover{
   color:#e77119;
+}
+.btn-outline-secondary{
+  background-color: white;
+}
+.form-floating label{
+  color:black;
 }

@@ -2,7 +2,7 @@
 $location = "";
 require "head.php";
 ?>
-<body class="cor">
+<body>
     
     <form method="post" action="criar_conta2.php" class="centered">
         <label>qual o tipo de conta será criada?</label>
