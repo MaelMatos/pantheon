@@ -1,14 +1,18 @@
 <?php
 require "../../head.php";
 ?>
-<script>
-    function confirmar(){
-        let i = confirm("se voltar, todos os dados não salvos serão perdidos, deseja continuar?");
-        if(i){
-            window.history.back();
+<head>
+    <script>
+        function confirmar(){
+            let i = confirm("se voltar, todos os dados não salvos serão perdidos, deseja continuar?");
+            if(i){
+                window.history.back();
+            }
         }
-    }
-</script>
+    </script>
+    <link rel="stylesheet" href="../../pantheon.css">
+
+</head>
 <button onclick="confirmar()" style="background-color:dark;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/U%2B2190.svg/25px-U%2B2190.svg.png"></button>
 
 
