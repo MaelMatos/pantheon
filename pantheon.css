@@ -11,19 +11,19 @@ background-color: #723396;
 
 
 h1{
- text-color:#ffffff ;
+ color:#ffffff ;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 p{
-    text-color:#ffffff ;
+    color:#ffffff ;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 label{
- text-color:#ffffff ;
+ color:#ffffff ;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -33,7 +33,12 @@ button{
     text-decoration: none;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+input{
+background-color: #e77119;
+    color:#ffffff ;
+    text-decoration: none;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .head {
     display: inline-flexbox; /* Habilita flexbox */
     justify-content: space-between; /* Distribui elementos uniformemente */
