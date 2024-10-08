@@ -18,7 +18,7 @@ if(isset($_SESSION['nome'])){
     .margem{margin-bottom:15px;}
 </style>
 </head>
-<body class="cor">
+<body>
   <div class="centered">
 
     <form action="login.php" method="post">

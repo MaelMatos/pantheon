@@ -29,7 +29,8 @@ label{
 
 button{
     background-color: #e77119;
-    text-color:#ffffff ;
+    color:#ffffff ;
+    text-decoration: none;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
