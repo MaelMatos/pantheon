@@ -29,8 +29,8 @@ if(isset($_SESSION['nome'])){
       <div class="form-group">
         <label for="formGroupExampleInput2">Senha</label>
         <input type="password" class="form-control margem" id="formGroupExampleInput2" name="pw">
-        <input type="submit" value="entrar">  
-        <button><a href="criar_conta.php">criar conta</a></button>
+        <input type="submit" value="entrar" class="button">  
+        <button class="button"><a href="criar_conta.php" class="button">criar conta</a></button>
       </div>
     </form>
   </div>

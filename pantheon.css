@@ -1,55 +1,59 @@
-.centered {position: fixed; top: 50%; left: 50%;
-    /* bring your own prefixes */
-     transform: translate(-50%, -50%); text-align: center;}
-.cor{background-color:#ce9178}
-.grp{text-align: center;}
-
-body{
-/*  background:url("fundo.png") repeat; */
-background-color: #723396;
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-
-h1{
- color:#ffffff ;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.cor {
+  background-color: #ce9178;
 }
 
-
-p{
-    color:#ffffff ;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.grp {
+  text-align: center;
 }
 
-
-label{
- color:#ffffff ;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body {
+  /* background: url("fundo.png") repeat; */
+  background-color: #723396;
 }
 
-button{
-    background-color: #e77119;
-    color:#ffffff ;
-    text-decoration: none;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+h1 {
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-input{
-background-color: #e77119;
-    color:#ffffff ;
-    text-decoration: none;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+p {
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+label {
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button {
+  background-color: #e77119;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .head {
-    display: inline-flexbox; /* Habilita flexbox */
-    justify-content: space-between; /* Distribui elementos uniformemente */
-    align-items: center; /* Alinha verticalmente ao centro */
-    padding: 10px; /* Adiciona espaçamento */
-    background-color: lightgray;
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-  
-  .head a {
-    margin-right: 20px; /* Adiciona espaçamento entre a logo e o botão */
-  }
+  display: inline-flex; /* Habilita flexbox */
+  justify-content: space-between; /* Distribui elementos uniformemente */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 10px; /* Adiciona espaçamento */
+  background-color: lightgray;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.head a {
+  margin-right: 20px; /* Adiciona espaçamento entre a logo e o botão */
+}
+
