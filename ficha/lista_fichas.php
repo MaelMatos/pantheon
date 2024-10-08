@@ -25,7 +25,7 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php
     foreach($fichas as $ficha){
       $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
-      echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
+      echo "<a href='".$root."/pantheon/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha']."'><tr>";
       echo "<td>".$ficha['nome']."</td>";
       echo "<td>".$ficha['campanha']."</td>";
       echo "<td>".$ficha['LAST_EDIT']."</td>";
@@ -34,6 +34,6 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
     </tbody>
   </table>
-    <button class="button" style="text-align: center;display: flex;justify-content: center;"><a href="ficha.php" class="button">Adicionar nova ficha</a></button>
+    <button class="button" style="text-align: center;display: flex;justify-content: center;"><a href="fichanova.php" class="button">Adicionar nova ficha</a></button>
 </body>
 </html>

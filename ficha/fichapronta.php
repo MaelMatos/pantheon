@@ -1,5 +1,12 @@
 <?php
 require "../head.php";
+$id_ficha = $_GET['id_ficha'];
+$dados = $con->query("SELECT * FROM fichas WHERE id_ficha = '$id_ficha'")->fetch(PDO::FETCH_ASSOC);
+$tecnicas = $con->query("SELECT id_tecnica FROM tecnicas_fichas WHERE id_ficha = '$id_ficha' AND tipo='aprendida'")->fetchAll(PDO::FETCH_ASSOC);
+$tecnicas2 = $con->query("SELECT id_tecnica FROM tecnicas_fichas WHERE id_ficha = '$id_ficha' AND tipo='aprender'")->fetchAll(PDO::FETCH_ASSOC);
+$itens = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_ficha' AND tipo='coletado'")->fetchAll(PDO::FETCH_ASSOC);
+$itens2 = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_ficha' AND tipo='coletar'")->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <style>
@@ -90,9 +97,9 @@ require "../head.php";
     <h2>inventario</h2>
     <ul>
         <?php
-        foreach($itens as $item){//para cada valor($item) dentro do array($itens)
-            $item = $con->query("select * where id_item='$item' from itens")->fetch(PDO::FETCH_ASSOC);
-            echo "<a href='".$item['link']."'><ul>".$item['nome']."</ul></a>";
+          foreach ($itens as $item) {
+            $itemData = $con->query("SELECT * FROM itens WHERE id_item='" . $item['id_item'] . "'")->fetch(PDO::FETCH_ASSOC);
+            echo "<a href='" . $itemData['link'] . "'><li>" . $itemData['nome'] . "</li></a>";
         }
         ?>
         </ul>
@@ -102,9 +109,9 @@ require "../head.php";
     <h2>técnicas</h2>
     <ul>
         <?php
-        foreach($tecnicas as $tecnica){//para cada valor($tecnica) dentro do array($tecnicas)
-            $tecnica = $con->query("select * where id_tecnica='$tecnica' from tecnicas")->fetch(PDO::FETCH_ASSOC);
-            echo "<a href='".$tecnica['link']."'><ul>".$tecnica['nome']."</ul></a>";
+        foreach ($tecnicas as $tecnica) {
+            $tecnicaData = $con->query("SELECT * FROM tecnicas WHERE id_tecnica='" . $tecnica['id_tecnica'] . "'")->fetch(PDO::FETCH_ASSOC);
+            echo "<a href='" . $tecnicaData['link'] . "'><li>" . $tecnicaData['nome'] . "</li></a>";
         }
         ?>
         </ul>
