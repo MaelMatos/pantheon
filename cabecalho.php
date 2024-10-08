@@ -17,7 +17,7 @@ require "head.php";
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="<?php echo $root;?>/home.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <img src="<?php echo $root;?>/logo.png" class="bi me-2" style="width:50px;height:auto;">
-        <span class="fs-4">Panteão</span>
+        <span class="fs-4" style="color:white">Panteão</span>
       </a>
 
       <ul class="nav nav-pills">
