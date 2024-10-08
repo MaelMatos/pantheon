@@ -13,7 +13,6 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <title>Fichas</title>
 </head>
 <body>
-<div>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -37,6 +36,5 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </table>
   
     <button class="button" style="text-align: center;display: flex;justify-content: center;"><a href="ficha.php" class="button">Adicionar nova ficha</a></button>
-  </div>
 </body>
 </html>
