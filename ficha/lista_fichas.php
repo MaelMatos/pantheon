@@ -7,25 +7,35 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($fichas as $ficha){
     $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
 ?>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Campanha</th>
-      <th scope="col">Ultima vez editado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-  <?php
-  echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
-
-  echo "</tr></a>";
-}
-?>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fichas</title>
+</head>
+<body>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Campanha</th>
+        <th scope="col">Ultima vez editado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    <?php
+    echo "<a href='".$root."/pantheon/ficha/ficha.php?id_ficha=".$ficha['id_ficha']."'><tr>";
+  
+    echo "</tr></a>";
+  }
+  ?>
+    </tbody>
+  </table>
+</body>
+</html>
