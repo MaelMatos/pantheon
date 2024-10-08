@@ -22,11 +22,6 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
     <?php
     foreach($fichas as $ficha){
       $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
@@ -39,5 +34,6 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   ?>
     </tbody>
   </table>
+
 </body>
 </html>
