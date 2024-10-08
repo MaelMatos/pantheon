@@ -56,4 +56,6 @@ label {
 .head a {
   margin-right: 20px; /* Adiciona espaçamento entre a logo e o botão */
 }
-
+.nav-item a:hover{
+  color:red;
+}
