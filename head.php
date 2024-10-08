@@ -45,7 +45,7 @@ require "sessao.php";
 if(!$debug){
     if (!isset($location)){
         if(!isset($_SESSION['nome'])){
-            header('location:../pantheon/index.php');
+            header('location:../index.php');
         }
     }
 }
