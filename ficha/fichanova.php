@@ -1,12 +1,7 @@
 <?php
 require "../head.php";
 ?>
-<script>
-    n = 1;
-function add_tecnica(){
-    document.write('<?php  include add_tecnica.php; ?>')
-}
-</script>
+
 <style>
     h2{text-align:center}
 </style>
@@ -95,6 +90,6 @@ function add_tecnica(){
 <textarea name="info"></textarea>
 <input type="hidden" name="id_ficha">
 <div style="text-align: center;}">
-    <input type="submit" value="salvar">
+<button class="button">salvar</button>
 </div>
 </form>
