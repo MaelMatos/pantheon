@@ -87,7 +87,7 @@ $itens2 = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_fi
             <div class="form-control" id="floatingInput">
                 <input type="number" value="<?php echo $dados['HP'];?>" name="HP">
                 /
-                <input type="number" value="<?php echo $dados['HPMAX'];?>" name="OMMAX">
+                <input type="number" value="<?php echo $dados['HPMAX'];?>" name="HPMAX">
             </div>
             <label for="floatingInput">Vida</label>
         </div>

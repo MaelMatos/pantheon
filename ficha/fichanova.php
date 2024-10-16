@@ -80,7 +80,7 @@ require "../head.php";
             <div class="form-control" id="floatingInput">
                 <input type="number" name="HP">
                 /
-                <input type="number" name="OMMAX">
+                <input type="number" name="HPMAX">
             </div>
             <label for="floatingInput">Vida</label>
         </div>
