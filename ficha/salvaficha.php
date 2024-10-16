@@ -70,7 +70,7 @@ $stmt = $con->prepare($sql);
     $stmt->bindParam(":info", $info);
     $stmt->bindParam(":LAST_EDIT", $last_edit);
     $stmt->bindParam(":id_ficha", $id_ficha);
-}
+
     
     // Executa a consulta
     if ($stmt->execute()) {
