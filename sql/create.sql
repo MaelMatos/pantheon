@@ -26,6 +26,7 @@ CREATE Table fichas(
     HP BIGINT,
     HPMAX BIGINT,
     LAST_EDIT VARCHAR(20),
+    info mediumtext,
     PRIMARY KEY(id_ficha)
 ); 
 
