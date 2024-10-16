@@ -9,7 +9,7 @@ create table usuarios(
     PRIMARY KEY(id_usuario)
 );
 CREATE Table fichas(
-    id_ficha INT NOT NULL,
+    id_ficha INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),
     mestre VARCHAR(255),
     campanha VARCHAR(255),
@@ -62,19 +62,19 @@ CREATE TABLE itens(
 );
 
 CREATE Table ficha_usuario(
-    id_usuario_ficha INT NOT NULL,
+    id_usuario_ficha INT NOT NULL AUTO_INCREMENT,
     id_ficha INT,
     id_usuario INT,
     PRIMARY KEY(id_usuario_ficha)
 );
 CREATE Table ficha_tecnica(
-    id_ficha_tecnica INT NOT NULL,
+    id_ficha_tecnica INT NOT NULL AUTO_INCREMENT,
     id_ficha INT,
     id_tecnica INT,
     PRIMARY KEY(id_ficha_tecnica)
 );
 CREATE Table ficha_item(
-    id_ficha_item INT NOT NULL,
+    id_ficha_item INT NOT NULL AUTO_INCREMENT,
     id_ficha INT,
     id_item INT,
     PRIMARY KEY(id_ficha_item)

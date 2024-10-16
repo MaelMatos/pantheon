@@ -113,7 +113,16 @@ else {
     if ($stmt->execute()) {
         // A ficha foi criada com sucesso
         $id_ficha = $con->lastInsertId();
-        echo "<script src='sucessoficha.js'></script>";
+        echo $id_ficha;
+        echo $id_usuario;
+        $id_usuario = $_SESSION['id_user'];
+        $sql = "INSERT INTO ficha_usuarios(id_ficha, id_usuario) VALUES (:id_ficha, :id_usuario)";
+        $stmt = $con->prepare($sql);
+        $stmt->bindParam(":id_ficha", $id_ficha);
+        $stmt->bindParam(":id_usuario", $id_usuario);
+        if($stmt->execute()){
+            echo "<script src='sucessoficha.js'></script>";
+        }
         
     } else {
         // Ocorreu um erro durante a criação
