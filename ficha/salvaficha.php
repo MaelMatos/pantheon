@@ -2,8 +2,6 @@
 include "../head.php";
 $last_edit = date("d-m-y H:i:s");
 
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recupera os dados do formulário
     $nome = $_POST["nome"];
     $mestre = $_POST["mestre"];
@@ -70,7 +68,6 @@ $stmt = $con->prepare($sql);
     $stmt->bindParam(":info", $info);
     $stmt->bindParam(":LAST_EDIT", $last_edit);
     $stmt->bindParam(":id_ficha", $id_ficha);
-
     
     // Executa a consulta
     if ($stmt->execute()) {
