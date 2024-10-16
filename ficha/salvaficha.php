@@ -23,11 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $info = $_POST["info"];
     if(isset($_POST["id_ficha"])){
         $id_ficha = $_POST["id_ficha"];
-    }
-
-
-    // Valida os dados (adicione validações conforme necessário)
-
+        
+        
+        // Valida os dados (adicione validações conforme necessário)
+        
     // Prepara a consulta SQL para atualizar a ficha
     $sql = "UPDATE fichas SET 
                nome = :nome,
@@ -49,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                LAST_EDIT = :LAST_EDIT
            WHERE id_ficha = :id_ficha";
 
-    // Prepara a instrução preparada
-    $stmt = $con->prepare($sql);
+// Prepara a instrução preparada
+$stmt = $con->prepare($sql);
 
     // Vincula os valores aos parâmetros
     $stmt->bindParam(":nome", $nome);
@@ -71,7 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(":info", $info);
     $stmt->bindParam(":LAST_EDIT", $last_edit);
     $stmt->bindParam(":id_ficha", $id_ficha);
-
+}
+    
     // Executa a consulta
     if ($stmt->execute()) {
         // A ficha foi atualizada com sucesso
