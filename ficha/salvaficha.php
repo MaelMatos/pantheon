@@ -1,5 +1,5 @@
 <?php
-include "head.php";
+include "../head.php";
 $last_edit = date("d-m-y H:i:s");
 
 // Verifica se o formulário foi enviado
