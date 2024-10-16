@@ -53,11 +53,11 @@ $stmt = $con->prepare($sql);
     $stmt->bindParam(":nome", $nome);
     $stmt->bindParam(":mestre", $mestre);
     $stmt->bindParam(":campanha", $campanha);
-    $stmt->bindParam(":FOR", $FOR);
+    $stmt->bindParam(":_FOR", $FOR);
     $stmt->bindParam(":RES", $RES);
     $stmt->bindParam(":AG", $AG);
     $stmt->bindParam(":HAB", $HAB);
-    $stmt->bindParam(":INT", $INT);
+    $stmt->bindParam(":_INT", $INT);
     $stmt->bindParam(":PD", $PD);
     $stmt->bindParam(":CO", $CO);
     $stmt->bindParam(":CF", $CF);
@@ -83,8 +83,8 @@ $stmt = $con->prepare($sql);
     // Valida os dados do formulário (se necessário)
 
     // Prepara a consulta SQL para inserir uma nova ficha
-    $sql = "INSERT INTO fichas (nome, mestre, campanha, FOR, RES, AG, HAB, INT, PD, CO, CF, OM, OMMAX, HP, HPMAX, info, LAST_EDIT) 
-            VALUES (:nome, :mestre, :campanha, :FOR, :RES, :AG, :HAB, :INT, :PD, :CO, :CF, :OM, :OMMAX, :HP, :HPMAX, :info, :LAST_EDIT)";
+    $sql = "INSERT INTO fichas (nome, mestre, campanha, _FOR, RES, AG, HAB, _INT, PD, CO, CF, OM, OMMAX, HP, HPMAX, info, LAST_EDIT) 
+            VALUES (:nome, :mestre, :campanha, :_FOR, :RES, :AG, :HAB, :_INT, :PD, :CO, :CF, :OM, :OMMAX, :HP, :HPMAX, :info, :LAST_EDIT)";
 
     // Prepara a instrução preparada
     $stmt = $con->prepare($sql);
@@ -93,11 +93,11 @@ $stmt = $con->prepare($sql);
     $stmt->bindParam(":nome", $nome);
     $stmt->bindParam(":mestre", $mestre);
     $stmt->bindParam(":campanha", $campanha);
-    $stmt->bindParam(":FOR", $FOR);
+    $stmt->bindParam(":_FOR", $FOR);
     $stmt->bindParam(":RES", $RES);
     $stmt->bindParam(":AG", $AG);
     $stmt->bindParam(":HAB", $HAB);
-    $stmt->bindParam(":INT", $INT);
+    $stmt->bindParam(":_INT", $INT);
     $stmt->bindParam(":PD", $PD);
     $stmt->bindParam(":CO", $CO);
     $stmt->bindParam(":CF", $CF);
