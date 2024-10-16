@@ -77,7 +77,8 @@ $stmt = $con->prepare($sql);
         // Ocorreu um erro durante a atualização
         echo "Erro ao atualizar a ficha.";
     }
-}else {
+}
+else {
     // Caso não haja uma ficha cadastrada, cria uma nova
 
     // Valida os dados do formulário (se necessário)

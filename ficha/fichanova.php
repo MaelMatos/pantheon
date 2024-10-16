@@ -88,7 +88,6 @@ require "../head.php";
 
 </div>
 <textarea name="info"></textarea>
-<input type="hidden" name="id_ficha">
 <div style="text-align: center;}">
 <button class="button">salvar</button>
 </div>
