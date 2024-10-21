@@ -19,7 +19,7 @@
     require "../cabecalho.php";
     $id_user = $_SESSION["id_user"];
     $stmt = $con->prepare("SELECT id_ficha FROM ficha_usuario WHERE id_usuario = :id_user");
-    $stmt->bindParam(':id_user', $id_user);
+    $stmt->bindParam(':id_user', $id_user);//bug: retorna o erro "Warning: Array to string conversion"
     $stmt->execute();
     $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($fichas as $ficha){
