@@ -21,6 +21,7 @@ CREATE Table fichas(
     PD BIGINT,
     CO BIGINT,
     CF BIGINT,
+    CA BIGINT,
     OM BIGINT,
     OMMAX BIGINT,
     HP BIGINT,
