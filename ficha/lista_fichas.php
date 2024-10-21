@@ -1,10 +1,3 @@
-<?php
-require "../cabecalho.php";
-$stmt = $con->prepare("SELECT id_ficha FROM ficha_usuario WHERE id_usuario = :id_user");
-$stmt->bindParam(':id_user', $_SESSION['id_user']);
-$stmt->execute();
-$fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +6,7 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <title>Fichas</title>
 </head>
 <body>
-  <table class="table table-striped">
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th scope="col">Nome</th>
@@ -22,17 +15,21 @@ $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </tr>
     </thead>
     <tbody>
-    <?php
+  <?php
+    require "../cabecalho.php";
+    $stmt = $con->prepare("SELECT id_ficha FROM ficha_usuario WHERE id_usuario = :id_user");
+    $stmt->bindParam(':id_user', $_SESSION['id_user']);
+    $stmt->execute();
+    $fichas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($fichas as $ficha){
       $ficha = $ficha['id_ficha'];
       $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
-      echo "<a href='".$root."/pantheon/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha']."'><tr>";
+      echo "<tr><a href='".$root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha']."'>";
       echo "<td>".$ficha['nome']."</td>";
       echo "<td>".$ficha['campanha']."</td>";
       echo "<td>".$ficha['LAST_EDIT']."</td>";
-      echo "<button class='button'>editar</button>";
-      echo "</tr></a>";
-  }
+      echo "</a></tr>";
+    }
   ?>
     </tbody>
   </table>
