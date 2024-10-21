@@ -53,8 +53,7 @@ if (isset($id_ficha)) {// se houver um id de ficha,atualiza ela
 else {// Caso não haja uma ficha cadastrada, cria uma nova
     $sql = "DECLARE @id_ficha INT;
             INSERT INTO fichas (nome, mestre, campanha, _FOR, RES, AG, HAB, _INT, PD, CO, CF, OM, OMMAX, HP, HPMAX, info, LAST_EDIT) OUTPUT inserted.Id_ficha INTO @id_ficha VALUES (:nome, :mestre, :campanha, :_FOR, :RES, :AG, :HAB, :_INT, :PD, :CO, :CF, :OM, :OMMAX, :HP, :HPMAX, :info, :LAST_EDIT);
-            INSERT INTO ficha_usuario(id_ficha, id_usuario) VALUES (@id_ficha, :id_usuario);
-            ";
+            INSERT INTO ficha_usuario(id_ficha, id_usuario) VALUES (@id_ficha, :id_usuario);";
     $stmt = $con->prepare($sql);
     $stmt->bindParam(":nome", $nome);
     $stmt->bindParam(":mestre", $mestre);
