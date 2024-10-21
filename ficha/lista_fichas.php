@@ -25,7 +25,7 @@
     foreach($fichas as $ficha){
       $ficha = $ficha['id_ficha'];
       $ficha = $con->query("select * from fichas where id_ficha=$ficha")->fetch(PDO::FETCH_ASSOC);
-      echo "<tr><a href='".$root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha']."'>";
+      echo "<tr><a href='".$root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha']."'>";//link não está sendo gerado
       echo "<td>".$ficha['nome']."</td>";
       echo "<td>".$ficha['campanha']."</td>";
       echo "<td>".$ficha['LAST_EDIT']."</td>";
