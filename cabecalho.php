@@ -2,17 +2,9 @@
 require "head.php";
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <style>
         .nav-link{color:white;background-color:dark};
     </style>
-</head>
-<body>
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="<?php echo $root;?>/home.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -28,10 +20,4 @@ require "head.php";
       </ul>
     </header>
   </div>
-<!-- <div class="head">
-<a href="<?php echo $root;?>/home.php"><img src="<?php echo $root;?>/logo.png" style="height:50px;width:auto" /></a>
-<a href="<?php echo $root;?>/session_destroy.php?n=true"><button class="btn btn-danger">Sair</button></a>
-</div> -->
-    
-</body>
-</html>
+
