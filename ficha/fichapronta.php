@@ -2,13 +2,11 @@
 require "../head.php";
 $id_ficha = $_GET['id_ficha'];
 $dados = $con->query("SELECT * FROM fichas WHERE id_ficha = '$id_ficha'")->fetch(PDO::FETCH_ASSOC);
-$tecnicas = $con->query("SELECT id_tecnica FROM tecnicas_fichas WHERE id_ficha = '$id_ficha' AND tipo='aprendida'")->fetchAll(PDO::FETCH_ASSOC);
-$tecnicas2 = $con->query("SELECT id_tecnica FROM tecnicas_fichas WHERE id_ficha = '$id_ficha' AND tipo='aprender'")->fetchAll(PDO::FETCH_ASSOC);
-$itens = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_ficha' AND tipo='coletado'")->fetchAll(PDO::FETCH_ASSOC);
-$itens2 = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_ficha' AND tipo='coletar'")->fetchAll(PDO::FETCH_ASSOC);
-
-?>
-
+/* $tecnicas = $con->query("SELECT id_tecnica FROM ficha_tecnica WHERE id_ficha = '$id_ficha' AND tipo='aprendida'")->fetchAll(PDO::FETCH_ASSOC);
+$tecnicas2 = $con->query("SELECT id_tecnica FROM ficha_tecnica WHERE id_ficha = '$id_ficha' AND tipo='aprender'")->fetchAll(PDO::FETCH_ASSOC);
+$itens = $con->query("SELECT id_item FROM ficha_item WHERE id_ficha = '$id_ficha' AND tipo='coletado'")->fetchAll(PDO::FETCH_ASSOC);
+$itens2 = $con->query("SELECT id_item FROM ficha_item WHERE id_ficha = '$id_ficha' AND tipo='coletar'")->fetchAll(PDO::FETCH_ASSOC);
+ */?>
 <style>
     h2{text-align:center}
 </style>
@@ -31,7 +29,7 @@ $itens2 = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_fi
    <!--  atributos 1 -->
     <div class="input-group">
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['FOR'];?>" name="FOR">
+            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['_FOR'];?>" name="FOR">
             <label for="floatingInput">força</label>
         </div>
         <div class="form-floating mb-3">
@@ -50,7 +48,7 @@ $itens2 = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_fi
             <label for="floatingInput">habilidade</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['INT'];?>" name="INT">
+            <input type="number" class="form-control" id="floatingInput" value="<?php echo $dados['_INT'];?>" name="INT">
             <label for="floatingInput">inteligencia</label>
         </div>
         <div class="form-floating mb-3">
@@ -92,35 +90,7 @@ $itens2 = $con->query("SELECT id_item FROM itens_fichas WHERE id_ficha = '$id_fi
             <label for="floatingInput">Vida</label>
         </div>
 </div>
-<div style="display:flex;width:100%;">
-    <div style="width:50%;">
-    <h2>inventario</h2>
-    <ul>
-        <?php
-          foreach ($itens as $item) {
-            $itemData = $con->query("SELECT * FROM itens WHERE id_item='" . $item['id_item'] . "'")->fetch(PDO::FETCH_ASSOC);
-            echo "<a href='" . $itemData['link'] . "'><li>" . $itemData['nome'] . "</li></a>";
-        }
-        ?>
-        </ul>
-    </div>
-
-    <div style="width:50%;">
-    <h2>técnicas</h2>
-    <ul>
-        <?php
-        foreach ($tecnicas as $tecnica) {
-            $tecnicaData = $con->query("SELECT * FROM tecnicas WHERE id_tecnica='" . $tecnica['id_tecnica'] . "'")->fetch(PDO::FETCH_ASSOC);
-            echo "<a href='" . $tecnicaData['link'] . "'><li>" . $tecnicaData['nome'] . "</li></a>";
-        }
-        ?>
-        </ul>
-<?php
-/* include "add_tecnica.php"; */
-?>
-    </div>
-
-</div>
+<!-- include "fichaprontabottom.php"; -->
 <textarea name="info"><?php echo $dados['info'];?></textarea>
 <input type="hidden" name="id_ficha" value="<?php echo $id_ficha;?>">
 <div style="text-align: center;}">

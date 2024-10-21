@@ -13,6 +13,7 @@ $INT = $_POST["INT"];
 $PD = $_POST["PD"];
 $CO = $_POST["CO"];
 $CF = $_POST["CF"];
+$CA = $_POST["CA"];
 $OM = $_POST["OM"];
 $OMMAX = $_POST["OMMAX"];
 $HP = $_POST["HP"];
@@ -36,6 +37,7 @@ if(isset($_POST["id_ficha"])){
     $stmt->bindParam(":PD", $PD);
     $stmt->bindParam(":CO", $CO);
     $stmt->bindParam(":CF", $CF);
+    $stmt->bindParam(":CA", $CA);
     $stmt->bindParam(":OM", $OM);
     $stmt->bindParam(":OMMAX", $OMMAX);
     $stmt->bindParam(":HP", $HP);
@@ -64,6 +66,7 @@ if(isset($_POST["id_ficha"])){
     $stmt->bindParam(":PD", $PD);
     $stmt->bindParam(":CO", $CO);
     $stmt->bindParam(":CF", $CF);
+    $stmt->bindParam(":CA", $CA);
     $stmt->bindParam(":OM", $OM);
     $stmt->bindParam(":OMMAX", $OMMAX);
     $stmt->bindParam(":HP", $HP);
