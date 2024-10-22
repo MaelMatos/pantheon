@@ -70,7 +70,7 @@ function StartSession(){//maneira correta de iniciar sessão
     else{echo '<script>console.log("sessão já iniciada");</script>';}}
 
 /*--------- Configurações do sistema ---------*/
-$debug = true;
+$debug = false;
 $local = true;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot();
