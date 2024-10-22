@@ -86,6 +86,7 @@ if(isset($_POST["id_ficha"])){
         } else {
             echo "Erro ao associar a ficha ao usuário.";
         }
+        
     } else {
         echo "Erro ao criar a ficha.";
     }
