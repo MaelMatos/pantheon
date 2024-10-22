@@ -44,7 +44,7 @@ function Debug(){//mostra variaveis definidas
     $user_n = $con->query("SELECT COUNT(nome) as user_n FROM usuarios;");
     $user_n = $user_n->fetch(PDO::FETCH_ASSOC);
     $_SESSION['user_n'] = $user_n;}
-function ConnectDB(bol $local) {//connecta no banco de dados
+function ConnectDB($local) {//connecta no banco de dados
     if($local){
             $host = "localhost:3306";
             $database_name = "pantheon";
