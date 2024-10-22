@@ -65,7 +65,8 @@ function ConnectDB($local) {//connecta no banco de dados
 function StartSession(){//maneira correta de iniciar sessão
     if(!isset($_SESSION)){
         session_start();
-    }}
+        echo '<script>console.log("iniciando sessão");</script>';
+    }else{echo '<script>console.log("sessão já iniciada");</script>';}}
 
 /*--------- Configurações do sistema ---------*/
 $debug = true;
