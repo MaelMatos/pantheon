@@ -33,7 +33,7 @@ function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $
     }
     $root = $root."pantheon";
     return $root;}
-function Debug(){//mostra variaveis definidas
+function Debug($con){//mostra variaveis definidas
     /* $info = var_dump();
     echo "<script>console.log('senha:".$info."')</script>"; */
     // Use get_defined_vars() function
@@ -68,7 +68,7 @@ function StartSession(){//maneira correta de iniciar sessão
     }}
 
 /*--------- Configurações do sistema ---------*/
-$debug = false;
+$debug = true;
 $local = true;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot();
@@ -81,7 +81,7 @@ if(!$debug){//redireciona se o usuario não fez login e o debug não estiver ati
         }
     }}
 else{//se o debug estiver ativado,imprime todas as variaveis definidas
-    Debug();}
+    Debug($con);}
 ?>
 <!-- icones -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
