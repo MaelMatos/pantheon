@@ -45,13 +45,27 @@ function Debug(){//mostra variaveis definidas
     $user_n = $con->query("SELECT COUNT(nome) as user_n FROM usuarios;");
     $user_n = $user_n->fetch(PDO::FETCH_ASSOC);
     $_SESSION['user_n'] = $user_n;}
+function ConnectDB(bol $local) {//connecta no banco de dados
+    if($local){
+            $host = "localhost:3306";
+            $database_name = "pantheon";
+            $userr = "root";
+            $password = "";}
+    else{
+            $host = "sql204.infinityfree.com:3306";
+            $database_name = "if0_36745921_pantheon";   
+            $userr = "if0_36745921";
+            $password = "w3OiSfo4i9Mx7";}
+    try{
+            $con = new PDO("mysql:host=$host;dbname=$database_name","$userr","$password");
+            $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo '<script>console.log("conexão bem sucedida");</script>';}
+            catch(PDOException $con_error) {
+            echo '<script>console.log("conexão falhou: ' . $con_error->getMessage() . '");</script>';}
+    return $con;}
 $root = GetRoot();
-/* conexão com banco de dados */
-
-require "conect.php";
-
+$con = ConnectDB($local);
 /* inciar sessão */
-
 require "sessao.php";
 
 if(!$debug){//redireciona se o usuario não fez login e o debug não estiver ativado
