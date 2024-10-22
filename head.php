@@ -2,7 +2,7 @@
 $debug = false;
 $local = true;
 /* $root = __dir__; */
-function GetRoot() {
+function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $root=>../pantheon
     // Iniciar a contagem
     $contagem = 0;
   
@@ -34,8 +34,7 @@ function GetRoot() {
         $contagem = $contagem-1;
     }
     $root = $root."pantheon";
-    return $root;
-}
+    return $root;}
 $root = GetRoot();
 /* conexão com banco de dados */
 
