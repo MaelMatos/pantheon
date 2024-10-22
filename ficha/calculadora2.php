@@ -6,7 +6,7 @@ $va= $_GET['va'];
 $m= $_GET['m'];
 $vt= 0;
 $nd = $rn-$ra;
-include "../sessao.php";
+include "../head.php";
 include "dados.php";
 $dr=Dcrit($nd,$nl);
 while($rn>$ra)
