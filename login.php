@@ -24,6 +24,7 @@ if($debug){
 
 //coleta nivel de acesso do usuario
 $id_user = $con->query("select id_usuario from usuarios where nome='$user'")->fetch(PDO::FETCH_ASSOC);
+/* $id_user = $id_user['id_usuario']; */ //solução do bug em lista_fichas.php:22
 
 //compara resultados e altera os valores
 if($epw = $rpw){
