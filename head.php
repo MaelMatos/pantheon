@@ -1,6 +1,5 @@
 <?php
-$debug = false;
-$local = true;
+/*--------- Definição de funções ---------*/
 function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $root=>../pantheon
     // Iniciar a contagem
     $contagem = 0;
@@ -63,11 +62,18 @@ function ConnectDB(bol $local) {//connecta no banco de dados
             catch(PDOException $con_error) {
             echo '<script>console.log("conexão falhou: ' . $con_error->getMessage() . '");</script>';}
     return $con;}
+function StartSession(){//maneira correta de iniciar sessão
+    if(!isset($_SESSION)){
+        session_start();
+    }}
+
+/*--------- Configurações do sistema ---------*/
+$debug = false;
+$local = true;
+/*--------- Inicialização do sistema ---------*/
 $root = GetRoot();
 $con = ConnectDB($local);
-/* inciar sessão */
-require "sessao.php";
-
+StartSession();
 if(!$debug){//redireciona se o usuario não fez login e o debug não estiver ativado
     if (!isset($location)){
         if(!isset($_SESSION['nome'])){
