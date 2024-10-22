@@ -53,7 +53,7 @@ if(isset($_POST["id_ficha"])){
     }
 } else {
     // Create new character sheet
-    $sql = "INSERT INTO fichas (nome, mestre, campanha, _FOR, RES, AG, HAB, _INT, PD, CO, CF, OM, OMMAX, HP, HPMAX, info, LAST_EDIT) VALUES (:nome, :mestre, :campanha, :_FOR, :RES, :AG, :HAB, :_INT, :PD, :CO, :CF, :OM, :OMMAX, :HP, :HPMAX, :info, :LAST_EDIT)";
+    $sql = "INSERT INTO fichas (nome, mestre, campanha, _FOR, RES, AG, HAB, _INT, PD, CO, CF, CA, OM, OMMAX, HP, HPMAX, info, LAST_EDIT) VALUES (:nome, :mestre, :campanha, :_FOR, :RES, :AG, :HAB, :_INT, :PD, :CO, :CF, :CA, :OM, :OMMAX, :HP, :HPMAX, :info, :LAST_EDIT)";
     $stmt = $con->prepare($sql);
     $stmt->bindParam(":nome", $nome);
     $stmt->bindParam(":mestre", $mestre);
