@@ -54,20 +54,14 @@ require "conect.php";
 
 require "sessao.php";
 
-if(!$debug){
+if(!$debug){//redireciona se o usuario não fez login e o debug não estiver ativado
     if (!isset($location)){
         if(!isset($_SESSION['nome'])){
             header('location:'.$root.'/index.php');
         }
-    }
-}
-else{
-    Debug();
-}
-
-/* if($_SESSION['acess_lvl'] != 1 || 2 || 0){
-    header('location:index.php');
-} */
+    }}
+else{//se o debug estiver ativado,imprime todas as variaveis definidas
+    Debug();}
 ?>
 <!-- icones -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -78,6 +72,4 @@ else{
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
 <!-- css -->
 <link rel="stylesheet" href="<?php echo $root;?>/pantheon.css">
-
-<!-- $_SERVER['DOCUMENT_ROOT']."/pantheon/head.php" -->
 
