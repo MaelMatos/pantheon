@@ -2,7 +2,7 @@
 $debug = false;
 $local = true;
 /* $root = __dir__; */
-
+function GetRoot() {
     // Iniciar a contagem
     $contagem = 0;
   
@@ -28,12 +28,15 @@ $local = true;
       // Avançar para o próximo caractere
       $i++;
     }
-$root = "";
-while($contagem>0){
-    $root = $root."../";
-    $contagem = $contagem-1;
+    $root = "";
+    while($contagem>0){
+        $root = $root."../";
+        $contagem = $contagem-1;
+    }
+    $root = $root."pantheon";
+    return $root;
 }
-$root = $root."pantheon";
+$root = GetRoot();
 /* conexão com banco de dados */
 
 require "conect.php";
