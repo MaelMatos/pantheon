@@ -1,7 +1,6 @@
 <?php
 $debug = false;
 $local = true;
-/* $root = __dir__; */
 function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $root=>../pantheon
     // Iniciar a contagem
     $contagem = 0;
@@ -35,6 +34,17 @@ function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $
     }
     $root = $root."pantheon";
     return $root;}
+function Debug(){//mostra variaveis definidas
+    /* $info = var_dump();
+    echo "<script>console.log('senha:".$info."')</script>"; */
+    // Use get_defined_vars() function
+    $a = get_defined_vars();
+    // Display the output
+    print_r($a);
+    // pegar numeros de ususarios registrados
+    $user_n = $con->query("SELECT COUNT(nome) as user_n FROM usuarios;");
+    $user_n = $user_n->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['user_n'] = $user_n;}
 $root = GetRoot();
 /* conexão com banco de dados */
 
@@ -47,28 +57,13 @@ require "sessao.php";
 if(!$debug){
     if (!isset($location)){
         if(!isset($_SESSION['nome'])){
-            header('location:../index.php');
+            header('location:'.$root.'/index.php');
         }
     }
 }
-
-
-if($debug){
-    /* $info = var_dump();
-echo "<script>console.log('senha:".$info."')</script>"; */
-
-
-// Use get_defined_vars() function
-$a = get_defined_vars();
-  
-// Display the output
-print_r($a);
-
+else{
+    Debug();
 }
-// pegar numeros de ususarios registrados
-$user_n = $con->query("SELECT COUNT(nome) as user_n FROM usuarios;");
-$user_n = $user_n->fetch(PDO::FETCH_ASSOC);
-$_SESSION['user_n'] = $user_n
 
 /* if($_SESSION['acess_lvl'] != 1 || 2 || 0){
     header('location:index.php');
