@@ -66,7 +66,7 @@ function StartSession(){//maneira correta de iniciar sessão
     if(!isset($_SESSION)){
         session_start();
         echo '<script>console.log("iniciando sessão");</script>';
-        echo '<script>console.log("id do usuario:'.$_SESSION['id_user'].'");</script>';}
+        if(isset($_SESSION['id_user'])){ echo '<script>console.log("id do usuario:'.$_SESSION['id_user'].'");</script>';}}
     else{echo '<script>console.log("sessão já iniciada");</script>';}}
 
 /*--------- Configurações do sistema ---------*/
@@ -94,4 +94,5 @@ else{//se o debug estiver ativado,imprime todas as variaveis definidas
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
 <!-- css -->
 <link rel="stylesheet" href="<?php echo $root;?>/pantheon.css">
-
+<!-- icone da guia -->
+<link rel="icon" type="image/x-icon" href="<?php echo $root;?>/logo.png">
