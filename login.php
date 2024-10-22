@@ -26,7 +26,7 @@ if($debug){
 $id_user = $con->query("select id_usuario from usuarios where nome='$user'")->fetch(PDO::FETCH_ASSOC);
 
 //compara resultados e altera os valores
-if($epw = $rpw){
+if($epw == $rpw){
     $_SESSION['nome'] = $user;
     $_SESSION['id_user'] = $id_user['id_usuario'];//solução do bug em lista_fichas.php:22 && salvaficha.php:82(Warning: Array to string conversion),entretanto cria novo bug em lista_fichas.php que não exibe as fichas
     header("location:index.php");
