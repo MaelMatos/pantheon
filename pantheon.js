@@ -7,16 +7,16 @@ function confirmar(){
         window.history.back();
     }}
 function LoginError(){
-    let i = confirm('usuario e/ou senha incorretos!')
+    let i = confirm('usuario e/ou senha incorretos!');
     if(i){
     window.location.href='index.php';}}
 function FichaSuccess(){
-    let i = confirm('ficha stualizada com sucesso!')
+    let i = confirm('ficha stualizada com sucesso!');
     if(i){
     window.location.href='lista_fichas.php';
 }}
 function FichaError(){
-    let i = confirm('falha ao atualizar a ficha')
+    let i = confirm('falha ao atualizar a ficha');
     if(i){
     window.location.href='lista_fichas.php';
 }}
