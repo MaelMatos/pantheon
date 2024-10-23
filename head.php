@@ -68,6 +68,35 @@ function StartSession(){//maneira correta de iniciar sessão
         echo '<script>console.log("iniciando sessão");</script>';
         if(isset($_SESSION['id_user'])){ echo '<script>console.log("id do usuario:'.$_SESSION['id_user'].'");</script>';}}
     else{echo '<script>console.log("sessão já iniciada");</script>';}}
+function EchoFicha($form_result){//para uso posterior
+    $input_names = ['nome','mestre','campanha','FOR','RES','AG','HAB','INT','PD','CO','CF','CA','OM','OMMAX','HP','HPMAX','info'];
+    $input_full_names = ['nome' => 'Nome do Personagem','mestre' => 'Mestre','campanha' => 'Campanha','FOR' => 'Força','RES' => 'Resistência','AG' => 'Agilidade','HAB' => 'Habilidade','INT' => 'Inteligência','PD' => 'Poder','CO' => 'Caminho Omnérgico','CF' => 'Caminho Físico','CA' => 'Classe de Armadura','OM' => 'Omnergia','OMMAX' => 'Omnergia Máxima','HP' => 'Vida','HPMAX' => 'Vida Máxima','info' => 'Informações Adicionais'];
+    if (isset($form_result)) {
+        $input_values = [];
+        foreach($input_names as $input_name){
+            $input_values[$input_name] = $form_result[$input_name];}}
+    echo "<form action='salvaficha.php' method='post'>";
+    echo "    <div class='input-group'>";
+    $breakline = 1;
+    $data_type = 1;
+    foreach($input_names as $input_name){
+        if($breakline/3 == 1){
+            echo "    </div>";
+            echo "    <div class='input-group'>";
+        }
+        if($data_type<4){
+            $data_type2 = "text";
+        }else{ $data_type2 = "number"; } 
+        echo "    <div class='form-floating mb-3'>";
+        if(isset($input_values)){
+            echo "            <input type=".$data_type2." class='form-control' id='floatingInput value=".$input_values[$input_name]." name=".$input_name.">";}
+            else{echo "<input type=".$data_type2." class='form-control' id='floatingInput name=".$input_name.">";}
+        echo "            <label for='floatingInput'>".$input_full_name[$input_name]."</label>";
+        echo "    </div>";
+        if(isset($form_result['id_ficha'])){
+        echo "    <input type='hidden' name='id_ficha' value='".$form_result['id_ficha']."'>";}
+        $breakline++;
+        $data_type++;}}
 
 /*--------- Configurações do sistema ---------*/
 $debug = false;
