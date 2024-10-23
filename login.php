@@ -34,6 +34,6 @@ if($senha_hash == $senha_banco){
     header("location:index.php");
 }
 else if(!$debug){
-    header('location:erro_login.html');
+    echo "<script>LoginError();";
 }
 ?>
