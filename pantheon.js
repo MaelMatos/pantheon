@@ -13,3 +13,6 @@ function FichaSuccess(){
     window.alert('ficha criada com sucesso!');
     window.location.href='lista_fichas.php';
 }
+function PrintBack(){
+    document.write('<button onclick="confirmar()" style="background-color:dark;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/U%2B2190.svg/25px-U%2B2190.svg.png"></button>')
+}

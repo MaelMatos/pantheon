@@ -1,15 +1,9 @@
-<?php
-require "../../head.php";
-?>
 <head>
-    <script>
-
-    </script>
-    <link rel="stylesheet" href="../../pantheon.css">
-
+<?php
+require "../head.php";
+?>
 </head>
-<button onclick="confirmar()" style="background-color:dark;border:none"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/U%2B2190.svg/25px-U%2B2190.svg.png"></button>
-
+<script>PrintBack()</script>
 
 <form action="salvar_tecnica.php" method="get" class="centered">
 <div class="form-group" style="margin-bottom:5px;">
