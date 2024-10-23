@@ -123,5 +123,7 @@ else{//se o debug estiver ativado,imprime todas as variaveis definidas
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
 <!-- css -->
 <link rel="stylesheet" href="<?php echo $root;?>/pantheon.css">
+<!-- js -->
+<script type="text/javascript" src="<?php echo $root;?>/pantheon.js"></script>
 <!-- icone da guia -->
 <link rel="icon" type="image/x-icon" href="<?php echo $root;?>/logo.png">

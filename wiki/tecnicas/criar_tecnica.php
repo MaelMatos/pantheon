@@ -3,12 +3,7 @@ require "../../head.php";
 ?>
 <head>
     <script>
-        function confirmar(){
-            let i = confirm("se voltar, todos os dados não salvos serão perdidos, deseja continuar?");
-            if(i){
-                window.history.back();
-            }
-        }
+
     </script>
     <link rel="stylesheet" href="../../pantheon.css">
 
