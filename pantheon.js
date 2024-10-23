@@ -9,3 +9,7 @@ function confirmar(){
     if(i){
         window.history.back();
     }}
+function FichaSuccess(){
+    window.alert('ficha criada com sucesso!');
+    window.location.href='lista_fichas.php';
+}
