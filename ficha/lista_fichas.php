@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fichas</title>
+  <script>
+    function Link(url) {
+      window.location = url;
+    }
+  </script>
 </head>
 <body>
   <table class="table table-striped table-hover">
@@ -25,11 +30,11 @@
     foreach($fichas as $ficha){
       $id_ficha = $ficha['id_ficha'];
       $ficha = $con->query("select * from fichas where id_ficha=$id_ficha")->fetch(PDO::FETCH_ASSOC);
-      echo "<tr><a href='".$root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha']."'>";//link não está sendo gerado
+      echo "<tr onclick='Link(".$root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha'].");'>";//link não está sendo gerado
       echo "<td>".$ficha['nome']."</td>";
       echo "<td>".$ficha['campanha']."</td>";
       echo "<td>".$ficha['LAST_EDIT']."</td>";
-      echo "</a></tr>";
+      echo "</tr>";
     }
   ?>
     </tbody>
