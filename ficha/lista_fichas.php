@@ -32,8 +32,7 @@
       $id_ficha = $ficha['id_ficha'];
       $ficha = $con->query("select * from fichas where id_ficha=$id_ficha")->fetch(PDO::FETCH_ASSOC);
       $link = $root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha'];
-      echo "<script> let url = '$link';</script>";
-      echo "<tr onclick='Link(url)';>";//link não está sendo gerado
+      echo "<tr onclick='Link(\"$link\");'>";
       echo "<td>".$ficha['nome']."</td>";
       echo "<td>".$ficha['campanha']."</td>";
       echo "<td>".$ficha['LAST_EDIT']."</td>";
