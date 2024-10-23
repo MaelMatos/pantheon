@@ -6,9 +6,11 @@
   <title>Fichas</title>
   <script>
     function Link(url) {
+      console.log(url);
       window.location = url;
     }
   </script>
+  <?php require "../cabecalho.php"; ?>
 </head>
 <body>
   <table class="table table-striped table-hover">
@@ -21,7 +23,6 @@
     </thead>
     <tbody>
   <?php
-    require "../cabecalho.php";
     $id_user = $_SESSION["id_user"];
     $stmt = $con->prepare("SELECT id_ficha FROM ficha_usuario WHERE id_usuario = :id_user");
     $stmt->bindParam(':id_user', $id_user);//bug: retorna o erro "Warning: Array to string conversion"
@@ -30,7 +31,9 @@
     foreach($fichas as $ficha){
       $id_ficha = $ficha['id_ficha'];
       $ficha = $con->query("select * from fichas where id_ficha=$id_ficha")->fetch(PDO::FETCH_ASSOC);
-      echo "<tr onclick='Link(".$root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha'].");'>";//link não está sendo gerado
+      $link = $root."/ficha/fichapronta.php?id_ficha=".$ficha['id_ficha'];
+      echo "<script> let url = '$link';</script>";
+      echo "<tr onclick='Link(url)';>";//link não está sendo gerado
       echo "<td>".$ficha['nome']."</td>";
       echo "<td>".$ficha['campanha']."</td>";
       echo "<td>".$ficha['LAST_EDIT']."</td>";
