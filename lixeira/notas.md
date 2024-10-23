@@ -7,3 +7,6 @@
 falta slava técnicas
 
 lista de fichas
+
+- fazer sistema de recuperação de login por email(mailto php)
+- resolver falha de segurança e ficha.php
