@@ -5,6 +5,7 @@ require "../head.php";
 <style>
     h2{text-align:center}
 </style>
+<script>PrintBack()</script>
 <form action="salvaficha.php" method="post">
 <!-- informações adicionais -->
     <div class="input-group">

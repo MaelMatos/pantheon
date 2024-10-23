@@ -10,6 +10,7 @@ $itens2 = $con->query("SELECT id_item FROM ficha_item WHERE id_ficha = '$id_fich
 <style>
     h2{text-align:center}
 </style>
+<script>PrintBack()</script>
 <form action="salvaficha.php" method="post">
 <!-- informações adicionais -->
     <div class="input-group">

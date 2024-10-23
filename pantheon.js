@@ -10,7 +10,11 @@ function confirmar(){
         window.history.back();
     }}
 function FichaSuccess(){
-    window.alert('ficha criada com sucesso!');
+    window.alert('ficha stualizada com sucesso!');
+    window.location.href='lista_fichas.php';
+}
+function FichaError(){
+    window.alert('falha ao atualizar a ficha');
     window.location.href='lista_fichas.php';
 }
 function PrintBack(){

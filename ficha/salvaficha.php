@@ -47,9 +47,9 @@ if(isset($_POST["id_ficha"])){
     $stmt->bindParam(":id_ficha", $id_ficha);
 
     if($stmt->execute()){
-        echo "Ficha atualizada com sucesso!";
+        echo "<script>FichaSuccess()</script>";
     } else {
-        echo "Erro ao atualizar a ficha.";
+        echo "<script>FichaError()</script>";
     }
 } else {
     // Create new character sheet
@@ -82,13 +82,13 @@ if(isset($_POST["id_ficha"])){
         $stmt->bindParam(":id_usuario", $id_usuario);//bug: retorna o erro "Warning: Array to string conversion"
 
         if($stmt->execute()){
-            echo "<script src='sucessoficha.js'></script>";
+            echo "<script>FichaSucess()</script>";
         } else {
-            echo "Erro ao associar a ficha ao usuário.";
+            echo "<script>FichaError()</script>";
         }
         
     } else {
-        echo "Erro ao criar a ficha.";
+        echo "<script>FichaError()</script>";
     }
 }
 ?>
