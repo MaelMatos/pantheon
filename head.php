@@ -68,7 +68,7 @@ function StartSession(){//maneira correta de iniciar sessão
         echo '<script>console.log("iniciando sessão");</script>';
         if(isset($_SESSION['id_user'])){ echo '<script>console.log("id do usuario:'.$_SESSION['id_user'].'");</script>';}}
     else{echo '<script>console.log("sessão já iniciada");</script>';}}
-function EchoFicha($form_result){//para uso posterior
+function EchoFicha($form_result){//para uso posterior($form_result = $_POST)
     $input_names = ['nome','mestre','campanha','FOR','RES','AG','HAB','INT','PD','CO','CF','CA','OM','OMMAX','HP','HPMAX','info'];
     $input_full_names = ['nome' => 'Nome do Personagem','mestre' => 'Mestre','campanha' => 'Campanha','FOR' => 'Força','RES' => 'Resistência','AG' => 'Agilidade','HAB' => 'Habilidade','INT' => 'Inteligência','PD' => 'Poder','CO' => 'Caminho Omnérgico','CF' => 'Caminho Físico','CA' => 'Classe de Armadura','OM' => 'Omnergia','OMMAX' => 'Omnergia Máxima','HP' => 'Vida','HPMAX' => 'Vida Máxima','info' => 'Informações Adicionais'];
     if (isset($form_result)) {
