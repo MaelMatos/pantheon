@@ -2,7 +2,7 @@
 require "../head.php";
 $id_ficha = $_GET['id_ficha'];
 $permissao = $con->query("SELECT id_usuario FROM ficha_usuario WHERE id_ficha = '$id_ficha'");
-if ($permissao->rowCount() == 0 || $_SESSION['id_user']!= $permissao->fetch(PDO::FETCH_ASSOC)['id_usuario']) {
+if (($permissao->rowCount() == 0 || $_SESSION['id_user']!= $permissao->fetch(PDO::FETCH_ASSOC)['id_usuario']) and !($_SESSION['nome'] == ($dados['mestre']))) {
     header('location: home.php');
 }
 $dados = $con->query("SELECT * FROM fichas WHERE id_ficha = '$id_ficha'")->fetch(PDO::FETCH_ASSOC);
