@@ -9,29 +9,33 @@ require "head.php";
         <div class="form-check">
             <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" value="mestre">
             <label class="form-check-label" for="flexRadioDefault1">
-                mestre
+                Mestre
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault2" value="jogador">
             <label class="form-check-label" for="flexRadioDefault2">
-                jogador
+                Jogador
             </label>
         </div>
-        <div class="input-gruop">
+        <div class="">
             <div class="form-floating">
                 <input type="text" class="form-control" id="floatingPassword" name="user">
-                <label for="floatingPassword">usuario</label>
+                <label for="floatingPassword">Usuario</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" name="user">
+                <label for="floatingPassword">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name="password">
+                <label for="floatingPassword">Senha</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name="confirm_password">
+                <label for="floatingPassword">Confirmar Senha</label>
+            </div>
         </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" name="password">
-            <label for="floatingPassword">senha</label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" name="confirm_password">
-            <label for="floatingPassword">confirmar senha</label>
-        </div>
-    </div>
-    <input type="submit" value="continuar" class="btn btn-outline-secondary">
+    <input type="submit" value="Continuar" class="btn btn-outline-secondary">
 </form>
 </body>
