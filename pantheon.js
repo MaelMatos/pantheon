@@ -9,7 +9,8 @@ function confirmar(){
 function LoginError(){
     let i = confirm('usuario e/ou senha incorretos!');
     if(i){
-    window.location.href='index.php';}}
+    window.location.href='index.php';
+}}
 function FichaSuccess(){
     let i = confirm('ficha stualizada com sucesso!');
     if(i){
