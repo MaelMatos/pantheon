@@ -99,7 +99,7 @@ function EchoFicha($form_result){//para uso posterior($form_result = $_POST)
         $data_type++;}}
 
 /*--------- Configurações do sistema ---------*/
-$debug = false;
+$debug = true;
 $local = true;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot();

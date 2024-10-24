@@ -19,6 +19,9 @@ $sql = "SELECT senha FROM usuarios WHERE nome = :nome";
 $stmt = $con->prepare($sql);
 $stmt->bindValue(':nome', $nome, PDO::PARAM_STR);
 $senha_banco = $stmt->execute();
+if(!$senha_banco){
+    echo "<script>LoginError();</script>";
+}
 $senha_banco = $stmt->fetch(PDO::FETCH_ASSOC);
 $senha_banco = $senha_banco['senha'];
 if($debug){
