@@ -24,7 +24,7 @@ if(isset($_POST["id_ficha"])){
     $id_ficha = $_POST["id_ficha"];
 
     // Update existing character sheet
-    $sql = "UPDATE fichas SET nome = :nome, mestre = :mestre, campanha = :campanha, _FOR = :_FOR, RES = :RES, AG = :AG, HAB = :HAB, _INT = :_INT, PD = :PD, CO = :CO, CF = :CF, OM = :OM, OMMAX = :OMMAX, HP = :HP, HPMAX = :HPMAX, info = :info, LAST_EDIT = :LAST_EDIT WHERE id_ficha = :id_ficha";
+    $sql = "UPDATE fichas SET nome = :nome, mestre = :mestre, campanha = :campanha, _FOR = :_FOR, RES = :RES, AG = :AG, HAB = :HAB, _INT = :_INT, PD = :PD, CO = :CO, CF = :CF, CA = :CA, OM = :OM, OMMAX = :OMMAX, HP = :HP, HPMAX = :HPMAX, info = :info, LAST_EDIT = :LAST_EDIT WHERE id_ficha = :id_ficha";
     $stmt = $con->prepare($sql);
     $stmt->bindParam(":nome", $nome);
     $stmt->bindParam(":mestre", $mestre);
