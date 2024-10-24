@@ -23,6 +23,7 @@ $senha_banco = $stmt->fetch(PDO::FETCH_ASSOC);
 $id_user = $senha_banco['id_usuario'];
 if(!$senha_banco){
     echo "<script>LoginError();</script>";
+    exit();
 }
 $senha_banco = $senha_banco['senha'];
 if($debug){
@@ -35,8 +36,10 @@ if($senha_hash == $senha_banco){
     $_SESSION['nome'] = $nome;
     $_SESSION['id_user'] = $id_user['id_usuario'];
     header("location:index.php");
+    exit();
 }
 else if(!$debug){
     echo "<script>LoginError();</script>";
+    exit();
 }
 ?>
