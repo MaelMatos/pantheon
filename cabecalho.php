@@ -15,7 +15,10 @@ require "head.php";
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="<?php echo $root;?>/ficha/lista_fichas.php" class="nav-link">Fichas</a></li>
         <li class="nav-item"><a href="<?php echo $root;?>/ficha/calculadora.php" class="nav-link">Calculadora</a></li>
-        <li class="nav-item"><a href="<?php echo $root;?>/ficha/criar_tecnica.php" class="nav-link">Criar Técnicas</a></li>
+        <?php
+        if($_SESSION['tipo'] == "mestre"){
+          echo "<li class='nav-item'><a href='$root/ficha/criar_tecnica.php' class='nav-link'>Criar Tecnica</a></li>";
+        ?>
         <a href="<?php echo $root;?>/session_destroy.php?n=true"><button class="btn btn-danger">Sair</button></a>
       </ul>
     </header>
