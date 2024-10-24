@@ -103,11 +103,13 @@ function VerifyEmail($email){
     $subject = "Pantheon: Confirmação de Email";
     $message = "Olá, seu código de confirmação é: ".$code."\n\nCaso não tenha solicitado este código, ignore este email.";
     $sent = mail($to, $subject, $message);
-    return $sent;
+    $verify = [$sent,$code];
+    return $verify;
     //retorna true se o email foi enviado com sucesso, false se não
     if($sent){
         $_SESSION['email_verification_code'] = $code;
-    }}
+    }
+    }
 
 /*--------- Configurações do sistema ---------*/
 $debug = true;
