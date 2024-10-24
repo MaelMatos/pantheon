@@ -1,12 +1,18 @@
 <?php
 require "../head.php";
 $id_ficha = $_GET['id_ficha'];
+$permissao = $con->query("SELECT id_usuario FROM ficha_usuario WHERE id_ficha = '$id_ficha'");
+if ($permissao->rowCount() == 0 || $_SESSION['id_user']!= $permissao->fetch(PDO::FETCH_ASSOC)['id_usuario']) {
+    header('location: home.php');
+}
 $dados = $con->query("SELECT * FROM fichas WHERE id_ficha = '$id_ficha'")->fetch(PDO::FETCH_ASSOC);
 /* $tecnicas = $con->query("SELECT id_tecnica FROM ficha_tecnica WHERE id_ficha = '$id_ficha' AND tipo='aprendida'")->fetchAll(PDO::FETCH_ASSOC);
 $tecnicas2 = $con->query("SELECT id_tecnica FROM ficha_tecnica WHERE id_ficha = '$id_ficha' AND tipo='aprender'")->fetchAll(PDO::FETCH_ASSOC);
 $itens = $con->query("SELECT id_item FROM ficha_item WHERE id_ficha = '$id_ficha' AND tipo='coletado'")->fetchAll(PDO::FETCH_ASSOC);
 $itens2 = $con->query("SELECT id_item FROM ficha_item WHERE id_ficha = '$id_ficha' AND tipo='coletar'")->fetchAll(PDO::FETCH_ASSOC);
- */?>
+ */
+
+?>
 <style>
     h2{text-align:center}
 </style>
