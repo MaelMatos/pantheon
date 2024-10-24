@@ -15,6 +15,9 @@ $tipo = $_POST['tipo'];
 $hora = date("d-m-y H:i:s");
 $email = $_POST['email'];
 VerifyEmail($email);
+if($debug){
+    echo "<script>console.log($code);</script>";
+}
 ?>
 <form method="post" action="criar_conta3.php">
 <label>enviamos um código de 6 digitos para verifiacação do seu email,por favor insira-o abaixo</label>
