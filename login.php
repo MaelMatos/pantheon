@@ -35,7 +35,7 @@ if($debug){
 if($senha_hash == $senha_banco){
     //coleta id do usuario
     $_SESSION['nome'] = $nome;
-    $_SESSION['id_user'] = $id_user['id_usuario'];
+    $_SESSION['id_user'] = $id_user;
     $_SESSION['tipo'] = $tipo;
     header("location:index.php");
     exit();

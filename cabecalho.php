@@ -17,7 +17,7 @@ require "head.php";
         <li class="nav-item"><a href="<?php echo $root;?>/ficha/calculadora.php" class="nav-link">Calculadora</a></li>
         <?php
         if($_SESSION['tipo'] == "mestre"){
-          echo "<li class='nav-item'><a href='$root/ficha/criar_tecnica.php' class='nav-link'>Criar Tecnica</a></li>";
+          echo "<li class='nav-item'><a href='$root/ficha/criar_tecnica.php' class='nav-link'>Criar Tecnica</a></li>";}
         ?>
         <a href="<?php echo $root;?>/session_destroy.php?n=true"><button class="btn btn-danger">Sair</button></a>
       </ul>
