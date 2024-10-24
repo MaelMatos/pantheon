@@ -15,12 +15,13 @@ if($debug){
 }
 
 //coleta senha e compara no banco de dados
-$sql = "SELECT senha,id_usuario FROM usuarios WHERE nome = :nome";
+$sql = "SELECT * FROM usuarios WHERE nome = :nome";
 $stmt = $con->prepare($sql);
 $stmt->bindValue(':nome', $nome, PDO::PARAM_STR);
 $senha_banco = $stmt->execute();
 $senha_banco = $stmt->fetch(PDO::FETCH_ASSOC);
 $id_user = $senha_banco['id_usuario'];
+$tipo = $senha_banco['tipo'];
 if(!$senha_banco){
     echo "<script>LoginError();</script>";
     exit();
@@ -35,6 +36,7 @@ if($senha_hash == $senha_banco){
     //coleta id do usuario
     $_SESSION['nome'] = $nome;
     $_SESSION['id_user'] = $id_user['id_usuario'];
+    $_SESSION['tipo'] = $tipo;
     header("location:index.php");
     exit();
 }
