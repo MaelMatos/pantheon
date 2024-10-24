@@ -97,6 +97,17 @@ function EchoFicha($form_result){//para uso posterior($form_result = $_POST)
         echo "    <input type='hidden' name='id_ficha' value='".$form_result['id_ficha']."'>";}
         $breakline++;
         $data_type++;}}
+function VerifyEmail($email){
+    $code = random_int(100000,999999)
+    $to = $email;
+    $subject = "Pantheon: Confirmação de Email";
+    $message = "Olá, seu código de confirmação é: ".$code."\n\nCaso não tenha solicitado este código, ignore este email.";
+    $sent = mail($to, $subject, $message);
+    return $sent;
+    //retorna true se o email foi enviado com sucesso, false se não
+    if($sent){
+        $_SESSION['email_verification_code'] = $code;
+    }}
 
 /*--------- Configurações do sistema ---------*/
 $debug = true;
