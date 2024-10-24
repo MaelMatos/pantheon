@@ -36,6 +36,6 @@ require "head.php";
                 <label for="floatingPassword">Confirmar Senha</label>
             </div>
         </div>
-    <input type="submit" value="Continuar" class="btn btn-outline-secondary">
+    <input type="submit" value="Continuar" class="button">
 </form>
 </body>
