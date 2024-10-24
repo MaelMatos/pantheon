@@ -1,6 +1,6 @@
 <?php
 include "head.php";
-if (!($_POST['password'] == ['confirm_password'])) {
+if (!($_POST['password'] == $_POST['confirm_password'])) {
     echo "<script>RegisterError('senhas não conferem!');</script>";
     exit();}
 
