@@ -1,10 +1,15 @@
 <?php
 include "head.php";
 if (!($_POST['password'] == ['confirm_password'])) {
-    echo "<script>RegisterError('senhas não conferem!');</script>";}
-
+    echo "<script>RegisterError('senhas não conferem!');</script>";
+    exit();}
 // Obtém os dados do formulário
 $nome = $_POST['user'];
+if ($con->query("select * from usuarios where nome = '".$nome."'")->fetch(PDO::FETCH_ASSOC)){
+    echo "<script>RegisterError('Nome de usuário já existe!');</script>";
+    exit();
+}
+
 $senha = sha1($nome.$_POST['password']);
 $tipo = $_POST['tipo'];
 $hora = date("d-m-y H:i:s");
