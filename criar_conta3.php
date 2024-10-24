@@ -1,7 +1,7 @@
 <?php
 require "head.php";
 
-$nome = $_POST['user'];
+$nome = $_POST['nome'];
 $senha = $_POST['senha'];
 $tipo = $_POST['tipo'];
 $hora = $_POST['hora'];
