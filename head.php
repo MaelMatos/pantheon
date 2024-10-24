@@ -98,7 +98,7 @@ function EchoFicha($form_result){//para uso posterior($form_result = $_POST)
         $breakline++;
         $data_type++;}}
 function VerifyEmail($email){
-    $code = random_int(100000,999999)
+    $code = random_int(100000,999999);
     $to = $email;
     $subject = "Pantheon: Confirmação de Email";
     $message = "Olá, seu código de confirmação é: ".$code."\n\nCaso não tenha solicitado este código, ignore este email.";

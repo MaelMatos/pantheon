@@ -1,11 +1,18 @@
-function RegisterSuccess(){
-    window.alert('cadastrado realizado com sucesso!');
-    window.location.href='index.php';}
 function confirmar(){
     let i = confirm("se voltar, todos os dados não salvos serão perdidos, deseja continuar?");
     if(i){
         window.history.back();
     }}
+function RegisterSuccess(){
+    let i = confirm('cadastrado realizado com sucesso!');
+    if(i){
+    window.location.href='index.php';
+}}
+function RegisterError(type){
+    let i = confirm(`falha no cadastro! /n${type}`);
+    if(i){
+    window.location.href='index.php';
+}}
 function LoginError(){
     let i = confirm('usuario e/ou senha incorretos!');
     if(i){

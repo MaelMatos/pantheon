@@ -20,12 +20,16 @@ require "head.php";
         </div>
         <div class="input-gruop">
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingPassword" placeholder="usuario" name="user">
+                <input type="text" class="form-control" id="floatingPassword" name="user">
                 <label for="floatingPassword">usuario</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="senha" name="pw">
+            <input type="password" class="form-control" id="floatingPassword" name="password">
             <label for="floatingPassword">senha</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" name="confirm_password">
+            <label for="floatingPassword">confirmar senha</label>
         </div>
     </div>
     <input type="submit" value="continuar" class="btn btn-outline-secondary">
