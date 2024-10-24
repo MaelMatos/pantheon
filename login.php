@@ -30,7 +30,7 @@ if($senha_hash == $senha_banco){
     //coleta id do usuario
     $id_user = $con->query("select id_usuario from usuarios where nome='$nome'")->fetch(PDO::FETCH_ASSOC);
     $_SESSION['nome'] = $nome;
-    $_SESSION['id_user'] = $id_user['id_usuario'];//solução do bug em lista_fichas.php:22 && salvaficha.php:82(Warning: Array to string conversion),entretanto cria novo bug em lista_fichas.php que não exibe as fichas
+    $_SESSION['id_user'] = $id_user['id_usuario'];
     header("location:index.php");
 }
 else if(!$debug){
