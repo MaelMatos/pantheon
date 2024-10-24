@@ -24,7 +24,7 @@ require "head.php";
                 <label for="floatingPassword">Usuario</label>
             </div>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingPassword" name="user">
+                <input type="email" class="form-control" id="floatingPassword" name="email">
                 <label for="floatingPassword">Email</label>
             </div>
             <div class="form-floating">

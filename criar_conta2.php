@@ -8,24 +8,16 @@ $nome = $_POST['user'];
 $senha = sha1($nome.$_POST['password']);
 $tipo = $_POST['tipo'];
 $hora = date("d-m-y H:i:s");
-
-// Prepara a query de inserção
-$sql = "INSERT INTO usuarios (nome, senha, tipo, hora) VALUES (:nome, :senha, :tipo, :hora)";
-$stmt = $con->prepare($sql);
-
-// Define os valores para os marcadores de posição
-$stmt->bindValue(':nome', $nome, PDO::PARAM_STR);
-$stmt->bindValue(':senha', $senha, PDO::PARAM_STR);
-$stmt->bindValue(':tipo', $tipo, PDO::PARAM_STR);
-$stmt->bindValue(':hora', $hora, PDO::PARAM_STR);
-
-// Executa a query
-$inserir = $stmt->execute();
-
-// Verifica se a inserção foi bem-sucedida
-if ($inserir) {
-    echo "<script>RegisterSuccess();</script>";
-} else {
-    echo "<script>RegisterError('erro ao salvar dados');</script>";
-}
+$email = $_POST['email'];
+VerifyEmail($email);
 ?>
+<form method="post" action="criar_conta3.php">
+<label>enviamos um código de 6 digitos para verifiacação do seu email,por favor insira-o abaixo</label>
+<input type="text" name="codigo_email" required>
+<input type="hidden" name="nome" value="<?php echo $nome;?>">
+<input type="hidden" name="tipo" value="<?php echo $tipo;?>">
+<input type="hidden" name="senha" value="<?php echo $senha;?>">
+<input type="hidden" name="hora" value="<?php echo $hora;?>">
+<input type="hidden" name="email" value="<?php echo $email;?>">
+<input type="submit" value="continuar" class="button">
+</form>
