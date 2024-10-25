@@ -112,7 +112,7 @@ function VerifyEmail($email){
     }
 
 /*--------- Configurações do sistema ---------*/
-$debug = true;
+$debug = false;
 $local = true;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot();
