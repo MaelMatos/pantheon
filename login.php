@@ -1,6 +1,7 @@
 <?php
 $nome = $_POST['user'];
 $senha = $_POST['pw'];
+$location = "";
 require "head.php";
 
 //coletar usuario e senha do formulario (index.php)
