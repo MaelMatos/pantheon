@@ -7,7 +7,7 @@ function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $
     // Índice do caractere atual
     $i = 0;
     $string = $_SERVER['REQUEST_URI'];
-    $conjunto_caracteres = "pantheon";
+    $conjunto_caracteres = "www";
     $caractere_alvo = "/";
     // Loop while
     while ($i < strlen($string) - 1) {
@@ -31,7 +31,7 @@ function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $
         $root = $root."../";
         $contagem = $contagem-1;
     }
-    $root = $root."pantheon";
+    $root = $root."www";
     return $root;}
 function Debug($con){//mostra variaveis definidas
     /* $info = var_dump();
