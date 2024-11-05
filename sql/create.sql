@@ -1,5 +1,5 @@
-CREATE DATABASE pantheon;
-use pantheon;
+CREATE DATABASE pantheonrpg;
+use pantheonrpg;
 create table usuarios(
     id_usuario INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255),

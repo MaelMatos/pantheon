@@ -51,10 +51,10 @@ function ConnectDB($local) {//connecta no banco de dados
             $userr = "root";
             $password = "";}
     else{
-            $host = "sql204.infinityfree.com:3306";
-            $database_name = "if0_36745921_pantheon";   
-            $userr = "if0_36745921";
-            $password = "w3OiSfo4i9Mx7";}
+            $host = "mysql.pantheonrpg.kinghost.net:3306";
+            $database_name = "pantheonrpg";   
+            $userr = "pantheonrpg";
+            $password = "pantheon2828";}
     try{
             $con = new PDO("mysql:host=$host;dbname=$database_name","$userr","$password");
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -113,10 +113,13 @@ function VerifyEmail($email){
 
 /*--------- Configurações do sistema ---------*/
 $debug = true;
-$local = true;
+$local = false;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot();
 StartSession();
+if($debug){
+    echo "<script>console.log('debug habilitado');</script>";
+}
 $con = ConnectDB($local);
 if(!$debug){//redireciona se o usuario não fez login e o debug não estiver ativado
     if (!isset($location)){
