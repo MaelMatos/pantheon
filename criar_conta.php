@@ -1,7 +1,9 @@
+<head>
 <?php
 $location = "";
 require "head.php";
 ?>
+</head>
 <body>
     
     <form method="post" action="criar_conta2.php" class="centered">

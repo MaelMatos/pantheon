@@ -1,13 +1,17 @@
 <?php
 /*--------- Definição de funções ---------*/
-function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $root=>../pantheon
+function GetRoot($local) {//descobre raiz para criação de links dinamicos, retorna $root=>../pantheon
     // Iniciar a contagem
     $contagem = 0;
   
     // Índice do caractere atual
     $i = 0;
     $string = $_SERVER['REQUEST_URI'];
-    $conjunto_caracteres = "www";
+    if($local){
+        $conjunto_caracteres = "pantheon";
+    }else{
+        $conjunto_caracteres = "www";
+    }
     $caractere_alvo = "/";
     // Loop while
     while ($i < strlen($string) - 1) {
@@ -31,7 +35,8 @@ function GetRoot() {//descobre raiz para criação de links dinamicos, retorna $
         $root = $root."../";
         $contagem = $contagem-1;
     }
-    $root = $root."www";
+    if($local){$root = $root."/pantheon";
+    }
     return $root;}
 function Debug($con){//mostra variaveis definidas
     /* $info = var_dump();
@@ -113,9 +118,9 @@ function VerifyEmail($email){
 
 /*--------- Configurações do sistema ---------*/
 $debug = true;
-$local = false;
+$local = true;
 /*--------- Inicialização do sistema ---------*/
-$root = GetRoot();
+$root = GetRoot($local);
 StartSession();
 if($debug){
     echo "<script>console.log('debug habilitado');</script>";
@@ -143,3 +148,4 @@ else{//se o debug estiver ativado,imprime todas as variaveis definidas
 <script type="text/javascript" src="<?php echo $root;?>/pantheon.js"></script>
 <!-- icone da guia -->
 <link rel="icon" type="image/x-icon" href="<?php echo $root;?>/logo.png">
+<meta charset="utf-8"/>
