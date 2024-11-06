@@ -113,13 +113,18 @@ function VerifyEmail($email){
     $headers.= "From: $remetente\n";
     $headers.= "Content-type: multipart/mixed; boundary=\"$boundary\"\r\n";  
     $headers.= "$boundary\n"; 
-    $sent = mail($to, $subject, $message);
+    $sent = mail($to, $subject, $message, $headers);
     $verify = [$sent,$code];
     return $verify;
     //retorna true se o email foi enviado com sucesso, false se não
     if($sent){
         $_SESSION['email_verification_code'] = $code;
     }
+    elseif($debug){
+            if(!$sent){
+                echo "<script>console.log('".error_get_last()['message']."');</script>";
+            }
+        }
     }
 
 /*--------- Configurações do sistema ---------*/
