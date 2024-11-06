@@ -107,6 +107,12 @@ function VerifyEmail($email){
     $to = $email;
     $subject = "Pantheon: Confirmação de Email";
     $message = "Olá, seu código de confirmação é: ".$code."\n\nCaso não tenha solicitado este código, ignore este email.";
+    $remetente = "Pantheon <verification@pantheonrpg.kinghost.net>";
+    $boundary = "XYZ-" . date("dmYis") . "-ZYX";
+    $headers = "MIME-Version: 1.0\n";
+    $headers.= "From: $remetente\n";
+    $headers.= "Content-type: multipart/mixed; boundary=\"$boundary\"\r\n";  
+    $headers.= "$boundary\n"; 
     $sent = mail($to, $subject, $message);
     $verify = [$sent,$code];
     return $verify;
@@ -117,8 +123,8 @@ function VerifyEmail($email){
     }
 
 /*--------- Configurações do sistema ---------*/
-$debug = true;
-$local = true;
+$debug = false;
+$local = false;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot($local);
 StartSession();
