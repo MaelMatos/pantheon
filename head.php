@@ -35,7 +35,7 @@ function GetRoot($local) {//descobre raiz para criação de links dinamicos, ret
         $root = $root."../";
         $contagem = $contagem-1;
     }
-    if($local){$root = $root."/pantheon";
+    if($local){$root = $root."pantheon";
     }
     return $root;}
 function Debug($con){//mostra variaveis definidas
@@ -128,8 +128,8 @@ function VerifyEmail($email){
     }
 
 /*--------- Configurações do sistema ---------*/
-$debug = false;
-$local = false;
+$debug = true;
+$local = true;
 /*--------- Inicialização do sistema ---------*/
 $root = GetRoot($local);
 StartSession();
