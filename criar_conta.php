@@ -7,9 +7,9 @@ require "head.php";
 <body>
 <?php
 if($local){
-    $action = "criar_conta3.php"
+    $action = "criar_conta3.php";
     $hora = date("d-m-y H:i:s");
-    $code = 0000
+    $code = 0000;
     $_SESSION['email_verification_code'] = $code;
 }
 else{
@@ -31,7 +31,7 @@ else{
         </div>
         <div class="">
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingPassword" name="user">
+                <input type="text" class="form-control" id="floatingPassword" name="nome">
                 <label for="floatingPassword">Usuario</label>
             </div>
             <div class="form-floating">

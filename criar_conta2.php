@@ -5,11 +5,7 @@ if (!($_POST['password'] == $_POST['confirm_password'])) {
     echo "<script>RegisterError('senhas não conferem!');</script>";
     exit();}
 
-$nome = $_POST['user'];
-if ($con->query("select * from usuarios where nome = '".$nome."'")->fetch(PDO::FETCH_ASSOC)){
-    echo "<script>RegisterError('Nome de usuário já existe!');</script>";
-    exit();
-}
+$nome = $_POST['nome'];
 // Obtém os dados do formulário
 $senha = sha1($nome.$_POST['password']);
 $tipo = $_POST['tipo'];
@@ -18,6 +14,11 @@ $email = $_POST['email'];
 $code = VerifyEmail($email)[1];
 if($debug){
     echo "<script>console.log($code);</script>";
+}
+//verifica se o nome já está presente no banco de dados
+if ($con->query("select * from usuarios where nome = '".$nome."'")->fetch(PDO::FETCH_ASSOC)){
+    echo "<script>RegisterError('Nome de usuário já existe!');</script>";
+    exit();
 }
 ?>
 <form method="post" action="criar_conta3.php">
