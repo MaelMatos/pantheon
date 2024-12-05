@@ -5,8 +5,17 @@ require "head.php";
 ?>
 </head>
 <body>
-    
-    <form method="post" action="criar_conta2.php" class="centered">
+<?php
+if($local){
+    $action = "criar_conta3.php"
+    $hora = date("d-m-y H:i:s");
+    $code = 0000
+    $_SESSION['email_verification_code'] = $code;
+}
+else{
+    $action = "criar_conta2.php";
+}?>
+    <form method="post" action="<?php echo $action;?>" class="centered">
         <label>qual o tipo de conta será criada?</label>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" value="mestre">
@@ -38,6 +47,12 @@ require "head.php";
                 <label for="floatingPassword">Confirmar Senha</label>
             </div>
         </div>
+        <?php
+        if($local){
+            echo "<input type='hidden' name='hora' value='$hora'>";
+            echo "<input type='hidden' name='codigo_email' value='$code'>";
+        }
+        ?>
     <input type="submit" value="Continuar" class="button">
 </form>
 </body>

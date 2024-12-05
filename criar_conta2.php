@@ -25,7 +25,7 @@ if($debug){
 <input type="text" name="codigo_email" required>
 <input type="hidden" name="nome" value="<?php echo $nome;?>">
 <input type="hidden" name="tipo" value="<?php echo $tipo;?>">
-<input type="hidden" name="senha" value="<?php echo $senha;?>">
+<input type="hidden" name="password" value="<?php echo $senha;?>">
 <input type="hidden" name="hora" value="<?php echo $hora;?>">
 <input type="hidden" name="email" value="<?php echo $email;?>">
 <input type="submit" value="continuar" class="button">
