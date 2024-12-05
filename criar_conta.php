@@ -11,7 +11,6 @@ if($local){
     $hora = date("d-m-y H:i:s");
     $code = 0000;
     $_SESSION['email_verification_code'] = $code;
-    $senha = sha1($nome.$_POST['pw']);
 }
 else{
     $action = "criar_conta2.php";
