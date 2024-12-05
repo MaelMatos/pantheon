@@ -16,5 +16,5 @@ while($rn>$ra)
  }
 $m = $m*$nd;
 $r=$vt+$dr+$va+$m;
-echo "sua nova vida/energia é: ".$r;
+echo "<h1 style='color: white;'>sua nova vida/energia é: ".$r."</h1>";
 ?>
