@@ -3,12 +3,9 @@ $location = "";
 require "head.php";
 
 $nome = $_POST['nome'];
-if($local){
-    $senha = sha1($nome.$_POST['pw']);
-}
-else {
-    $senha = $_POST['password'];
-}
+
+$senha = $_POST['password'];
+$senha_hash = sha1($nome.$senha);
 $tipo = $_POST['tipo'];
 $hora = $_POST['hora'];
 $email = $_POST['email'];

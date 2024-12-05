@@ -1,6 +1,6 @@
 <?php
 $nome = $_POST['user'];
-$senha = $_POST['pw'];
+$senha = $_POST['password'];
 $location = "";
 require "head.php";
 

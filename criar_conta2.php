@@ -7,7 +7,7 @@ if (!($_POST['password'] == $_POST['confirm_password'])) {
 
 $nome = $_POST['nome'];
 // Obtém os dados do formulário
-$senha = sha1($nome.$_POST['password']);
+$senha = $_POST['password'];
 $tipo = $_POST['tipo'];
 $hora = date("d-m-y H:i:s");
 $email = $_POST['email'];
