@@ -3,7 +3,6 @@ $location = "";
 require "head.php";
 
 $nome = $_POST['nome'];
-
 $senha = $_POST['password'];
 $senha_hash = sha1($nome.$senha);
 $tipo = $_POST['tipo'];
@@ -15,7 +14,7 @@ $stmt = $con->prepare($sql);
 
 // Define os valores para os marcadores de posição
 $stmt->bindValue(':nome', $nome, PDO::PARAM_STR);
-$stmt->bindValue(':senha', $senha, PDO::PARAM_STR);
+$stmt->bindValue(':senha', $senha_hash, PDO::PARAM_STR);
 $stmt->bindValue(':tipo', $tipo, PDO::PARAM_STR);
 $stmt->bindValue(':hora', $hora, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);

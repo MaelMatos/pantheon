@@ -1,5 +1,5 @@
 <?php
-$nome = $_POST['user'];
+$nome = $_POST['nome'];
 $senha = $_POST['password'];
 $location = "";
 require "head.php";

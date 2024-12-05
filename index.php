@@ -23,7 +23,7 @@ if(isset($_SESSION['nome'])){
     <form action="login.php" method="post">
       <div class="form-group">
         <label for="formGroupExampleInput">Usuario</label>
-        <input type="text" class="form-control margem" id="formGroupExampleInput" name="user" autocomplete=off>
+        <input type="text" class="form-control margem" id="formGroupExampleInput" name="nome" autocomplete=off>
       </div>
       <div class="form-group">
         <label for="formGroupExampleInput2">Senha</label>
