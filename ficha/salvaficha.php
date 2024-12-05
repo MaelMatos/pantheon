@@ -91,4 +91,5 @@ if(isset($_POST["id_ficha"])){
         echo "<script>FichaError()</script>";
     }
 }
+echo "<h1 style='color:white;'>infelizimente não conseguimos te redirecionar,<a href='lista_fichas.php' style='color:orange'>clique aqui para ver suas fichas</a></h1>";
 ?>
