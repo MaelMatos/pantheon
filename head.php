@@ -52,7 +52,7 @@ function Debug($con){//mostra variaveis definidas
 function ConnectDB($local) {//connecta no banco de dados
     if($local){
             $host = "localhost:3306";
-            $database_name = "pantheon";
+            $database_name = "pantheonrpg";
             $userr = "root";
             $password = "";}
     else{
